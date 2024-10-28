@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Gestión de Procesos en Linux</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+    </head>
+    <body class="is-preload">
+
+        <!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Main -->
+            <div id="main">
+                <div class="inner">
+
+                    <!-- Header -->
+                    <header id="header">
+                        <a href="index.html" class="logo"><strong>Gestión de Procesos en Linux</strong></a>
+                        <ul class="icons">
+                            <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                            <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                            <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                        </ul>
+                    </header>
+
+                    <!-- Content -->
+                    <section>
+                        <header class="main">
+                            <h1>Gestión de Procesos en Linux</h1>
+                        </header>
+
+                        <p>En Linux, la gestión de procesos permite a los usuarios y al sistema operativo interactuar con las tareas en ejecución, controlando recursos, prioridades y estados. Esta sección cubre la estructura, comandos y técnicas para gestionar procesos eficientemente.</p>
+
+                        <!-- Introducción a la gestión de procesos -->
+                        <section>
+                            <div class="features">
+                                <article>
+                                    <div class="content">
+                                        <h2>¿Qué es la gestión de procesos?</h2>
+                                        <p>La gestión de procesos es el conjunto de técnicas y herramientas que permiten crear, monitorear, y controlar procesos en un sistema operativo. En Linux, cada tarea en ejecución es un proceso, que puede ser gestionado para optimizar el uso de recursos y mejorar el rendimiento del sistema.</p>
+                                    </div>
+                                </article>
+                                <article>
+                                    <span class="image fit">
+                                        <img src="images/gestion_de_procesos/los-procesos-de-linux.png" alt="Gestión de Procesos"/>
+                                    </span>
+                                </article>
+                            </div>
+                            <hr class="major" />
+                        </section>
+
+                        <!-- Estados de los procesos -->
+                        <section>
+                            <header class="major">
+                                <h2>Estados de los Procesos</h2>
+                            </header>
+                            <div class="features">
+                                <article>
+                                    <span class="image fit">
+                                        <img src="images/gestion_de_procesos/estados_procesos.jpg" alt="Gestión de Procesos"/>
+                                    </span>
+                                </article>
+                                <article>
+                                    <div class="content">
+                                        <p>Los procesos en Linux pueden estar en diferentes estados según su actividad:</p>
+                                        <ul>
+                                            <li><strong>Running (En ejecución):</strong> El proceso está activo y ejecutándose en la CPU.</li>
+                                            <li><strong>Sleeping (En espera):</strong> El proceso espera a que un recurso esté disponible.</li>
+                                            <li><strong>Stopped (Detenido):</strong> El proceso ha sido detenido, generalmente por una señal del sistema.</li>
+                                            <li><strong>Zombied (Zombificado):</strong> El proceso ha terminado, pero su entrada en la tabla de procesos sigue presente.</li>
+                                        </ul>                                </div>
+                                </article>
+                            </div>
+                            
+                        </section>
+
+                        <!-- Comandos de gestión de procesos -->
+                        <section>
+                            <header class="major">
+                                <h2>Comandos para la Gestión de Procesos</h2>
+                            </header>
+                            <div class="features">
+                                <article>
+                                    <div class="content">
+                                        <h3>ps</h3>
+                                        <p>Muestra información sobre los procesos en ejecución. Ejemplo: <code>ps aux</code> lista todos los procesos en el sistema.</p>
+                                    </div>
+                                </article>
+
+                                <article>
+                                    <div class="content">
+                                        <h3>top</h3>
+                                        <p>Muestra en tiempo real los procesos activos, su uso de CPU y memoria. Es útil para monitorear el rendimiento.</p>
+                                    </div>
+                                </article>
+
+                                <article>
+                                    <div class="content">
+                                        <h3>kill</h3>
+                                        <p>Envía una señal a un proceso para detenerlo. Ejemplo: <code>kill -9 PID</code> termina un proceso de manera forzada.</p>
+                                    </div>
+                                </article>
+
+                                <article>
+                                    <div class="content">
+                                        <h3>nice y renice</h3>
+                                        <p>Ajustan la prioridad de un proceso, permitiendo asignar más o menos CPU según la importancia.</p>
+                                    </div>
+                                </article>
+                            </div>
+                        </section>
+
+                        <!-- Prioridades y Planificación -->
+                        <section>
+                            <header class="major">
+                                <h2>Prioridades y Planificación de Procesos</h2>
+                            </header>
+                            <p>En Linux, cada proceso tiene una prioridad que afecta su acceso a la CPU. Las prioridades se definen a través de los valores de <em>nice</em>, que van de -20 (mayor prioridad) a 19 (menor prioridad).</p>
+                            <ul>
+                                <li><strong>Planificación FIFO:</strong> El proceso se ejecuta hasta completarse sin interrupciones.</li>
+                                <li><strong>Planificación Round Robin:</strong> Cada proceso recibe un intervalo de tiempo para ejecutarse.</li>
+                            </ul>
+                        </section>
+
+                        <!-- Gestión de señales -->
+                        <section>
+                            <header class="major">
+                                <h2>Gestión de Señales</h2>
+                            </header>
+                            <p>Las señales permiten que el sistema operativo o el usuario interactúen con los procesos, enviándoles instrucciones para detenerse, reiniciarse o realizar otras acciones:</p>
+                            <ul>
+                                <li><strong>SIGTERM (15):</strong> Termina el proceso de forma ordenada.</li>
+                                <li><strong>SIGKILL (9):</strong> Mata el proceso de forma inmediata.</li>
+                                <li><strong>SIGSTOP:</strong> Detiene el proceso sin terminarlo.</li>
+                                <li><strong>SIGCONT:</strong> Reanuda un proceso detenido.</li>
+                            </ul>
+                        </section>
+
+                        <!-- Referencias Bibliográficas -->
+                        <section>
+                            <header class="major">
+                                <h2>Referencias Bibliográficas</h2>
+                            </header>
+                            <ul>
+                                <li>Love, R. (2010). <em>Linux Kernel Development</em> (3rd ed.). Addison-Wesley Professional.</li>
+                                <li>Nemeth, E., Snyder, G., Hein, T., & Whaley, B. (2017). <em>UNIX and Linux System Administration Handbook</em>. Addison-Wesley Professional.</li>
+                                <li>Ward, B. (2014). <em>How Linux Works, 2nd Edition: What Every Superuser Should Know</em>. No Starch Press.</li>
+                            </ul>
+                        </section>
+                    </section>
+                </div>
+            </div>
+
+            <div id="sidebar">
+                <div class="inner">
+                    <!-- Search -->
+                    <section id="search" class="alt">
+                        <form method="post" action="#">
+                            <input type="text" name="query" id="query" placeholder="Search" />
+                        </form>
+                    </section>
+            
+                    <!-- Menu -->
+                    <nav id="menu">
+                        <header class="major">
+                            <h2>Menu</h2>
+                        </header>
+                        <ul>
+                            <li><a href="index.html">Homepage</a></li>
+                            <li><a href="HistoriaDeLinux.html">Historia</a></li>
+                            <li><a href="distribuciones.html">Distribuciones</a></li>
+                            <li><a href="arquitectura.html">Arquitectura</a></li>
+                            <li><a href="sistema_de_archivos.html">Sistemas de Archivos</a></li>
+                            <li><a href="gestion_procesos.html">Gestión de Procesos</a></li>
+                            <li><a href="ComandosBasicosDeNavegacion.html">Comandos Básicos</a></li>
+                            <li>
+                                <span class="opener">Comandos en LINUX</span>
+                                <ul>
+                                    <li><a href="ComandosBasicosDeNavegacion.html">Navegacion</a></li>
+                                    <li><a href="ComandosGestionArchivos.html">Gestión de archivos</a></li>
+                                    <li><a href="ComandosVisualizacionArchivos.html">Visualización de archivos</a></li>
+                                    <li><a href="ComandosCompresionEmpaquetado.html">Compresión y empaquetado</a></li>
+                                    <li><a href="ComandosGestionUsuariosPermisos.html">Gestión de usuarios y permisos</a></li>
+                                    <li><a href="ComandosRedConexion.html">Red y conexión</a></li>
+                                    <li><a href="ComandosProcesosSistema.html">Procesos y sistema</a></li>
+                                    <li><a href="ComandosInstalacionSoftware.html">Instalación de software</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+            
+                    <!-- Section -->
+                    <section>
+                        <header class="major">
+                            <h2>Contacto</h2>
+                        </header>
+                        <p>Para más información, puedes contactarnos a través de nuestras redes sociales o correo electrónico.</p>
+                        <ul class="contact">
+                            <li class="icon solid fa-envelope"><a href="#">info@linuxdistribuciones.com</a></li>
+                            <li class="icon solid fa-phone">(000) 000-0000</li>
+                            <li class="icon solid fa-home">1234 Linux Street<br />
+                                Ciudad, País 00000-0000</li>
+                        </ul>
+                    </section>
+            
+                    <!-- Footer -->
+                    <footer id="footer">
+                        <p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+                    </footer>
+                </div>
+            </div>
+            
+            
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </body>
+</html>

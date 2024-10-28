@@ -1,0 +1,270 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Sistemas de Archivos en Linux</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+    </head>
+    <body class="is-preload">
+
+        <!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Main -->
+            <div id="main">
+                <div class="inner">
+
+                    <!-- Header -->
+                    <header id="header">
+                        <a href="index.html" class="logo"><strong>Sistemas de Archivos en Linux</strong></a>
+                        <ul class="icons">
+                            <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                            <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                            <li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+                            <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                            <li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+                        </ul>
+                    </header>
+
+                    <!-- Content -->
+                    <section>
+                        <header class="main">
+                            <h1>Sistemas de Archivos en Linux</h1>
+                        </header>
+
+                        <p>Linux soporta una variedad de sistemas de archivos, adaptados a necesidades específicas como velocidad, confiabilidad, integridad de datos, y compatibilidad entre sistemas operativos. Aquí se describen los principales tipos de sistemas de archivos y cómo gestionar los dispositivos y procesos en Linux.</p>
+
+						<!-- Que son los sistemas de archivos-->
+						<section>
+							<div class="features">
+								<article>
+									<div class="content">
+										<h2>¿Qué son los Sistemas de Archivos?</h2>
+										<p>
+                                            Los sistemas de archivos (o file systems) son estructuras de datos y métodos que un sistema operativo utiliza para organizar, almacenar y gestionar archivos en dispositivos de almacenamiento como discos duros, SSDs o medios extraíbles. Un sistema de archivos define cómo se almacenan los archivos y cómo se accede a ellos, permitiendo operaciones como la lectura, escritura, creación y eliminación de archivos.
+                                        </p>
+									</div>
+								</article>
+								<article>
+                                    <span class="image fit">
+									    <img src="images/sistema_de_archivos/arbol_archivos.png"/>
+                                    </span>
+								</article>
+							</div>
+                            <hr class="major" />
+                            <div class="features">
+                                <article>
+                                    <span class="image fit">
+                                        <img src="images/sistema_de_archivos/file_system_arrows.png"/>
+                                    </span>
+                                </article>
+                                <article>
+                                    <div class="content">
+                                        <h2>Características de los Sistemas de Archivos</h2>
+										<ol>
+                                            <li>Estructura: Organizan archivos en una estructura jerárquica (como directorios y subdirectorios).</li>
+                                            <li>Métodos de acceso: Proporcionan métodos para acceder a los datos almacenados (por ejemplo, acceso directo o secuencial).</li>
+                                            <li>Control de permisos: Manejan los permisos de los archivos para controlar quién puede leer, escribir o ejecutar.</li>
+                                            <li>Integridad y seguridad: Muchos sistemas de archivos incluyen características para asegurar la integridad de los datos, como journaling y encriptación.</li>
+                                        </ol>
+                                    </div>
+                                </article>
+							</div>
+                            <hr class="major" />
+						</section>
+
+                        <!-- Tipos de Sistemas de Archivos -->
+                        <section>
+                            <header class="major">
+                                <h2>Tipos de Sistemas de Archivos</h2>
+                            </header>
+                            <div class="features">
+                                <article>
+                                    <div class="content">
+                                        <h3>ext4 (Fourth Extended Filesystem)</h3>
+                                        <p>Es el sistema de archivos predeterminado en muchas distribuciones de Linux, ofreciendo estabilidad y soporte para grandes volúmenes y archivos.</p>
+                                        <ul>
+                                            <li><strong>Capacidad:</strong> Hasta 1 exabyte de volumen y 16 terabytes por archivo.</li>
+                                            <li><strong>Características:</strong> Incluye journaling para evitar corrupción de datos.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article>
+                                    <div class="content">
+                                        <h3>XFS</h3>
+                                        <p>Conocido por su alto rendimiento, es ideal para entornos de servidor que requieren alta demanda de lectura y escritura.</p>
+                                        <ul>
+                                            <li><strong>Desarrollado por:</strong> SGI</li>
+                                            <li><strong>Características:</strong> Soporte de journaling, optimización para grandes volúmenes de datos.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article>
+                                    <div class="content">
+                                        <h3>Btrfs (B-tree Filesystem)</h3>
+                                        <p>Ofrece características avanzadas como instantáneas, compresión y verificación de integridad, ideal para sistemas que requieren una gestión avanzada de almacenamiento.</p>
+                                        <ul>
+                                            <li><strong>Características avanzadas:</strong> Snapshots, compresión, y verificación de integridad.</li>
+                                            <li><strong>Aplicaciones:</strong> Sistemas de alta redundancia y flexibilidad en la gestión de volúmenes.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article>
+                                    <div class="content">
+                                        <h3>Otros sistemas de archivos</h3>
+                                        <p>Además de los sistemas de archivos nativos de Linux, existen otros compatibles:</p>
+                                        <ul>
+                                            <li><strong>FAT32/exFAT:</strong> Compatible entre múltiples sistemas operativos (Windows, Linux, macOS).</li>
+                                            <li><strong>NTFS:</strong> Sistema de archivos de Windows, que puede ser montado en Linux para acceso a datos.</li>
+                                            <li><strong>ZFS:</strong> Popular en servidores por su integridad de datos y características avanzadas como la autocorrección de errores.</li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            </div>
+                        </section>
+
+                        <!-- Estructura Jerárquica del Sistema de Archivos -->
+                        <section>
+                            <header class="major">
+                                <h2>Estructura Jerárquica del Sistema de Archivos</h2>
+                            </header>
+                            
+                            <div class="features">
+                                <article>
+									<div class="content">
+										<p>Linux organiza su sistema de archivos en una estructura jerárquica, comenzando en el directorio raíz ("/") y subdividiéndose en directorios específicos.</p>
+                                        <ul>
+                                            <li><strong>/bin:</strong> Contiene los binarios esenciales del sistema.</li>
+                                            <li><strong>/etc:</strong> Archivos de configuración para el sistema y aplicaciones.</li>
+                                            <li><strong>/home:</strong> Directorios personales para cada usuario.</li>
+                                            <li><strong>/var:</strong> Archivos temporales, logs y bases de datos.</li>
+                                            <li><strong>/tmp:</strong> Almacena archivos temporales generados por el sistema y usuarios.</li>
+                                            <li><strong>/proc:</strong> Sistema de archivos virtual para información del sistema y procesos en ejecución.</li>
+                                        </ul>
+									</div>
+								</article>
+                                <article>
+                                    <span class="image fit">
+                                        <img src="images/sistema_de_archivos/sistema_de_archivos_organizacion.png"/>
+                                    </span>
+                                </article>
+                            </div>
+                        </section>
+
+                        <!-- Montaje y Desmontaje de Dispositivos -->
+                        <section>
+                            <header class="major">
+                                <h2>Montaje y Desmontaje de Dispositivos</h2>
+                            </header>
+                            <p>Para acceder a un sistema de archivos en Linux, primero debe montarse en un directorio específico conocido como punto de montaje.</p>
+                            <ul>
+                                <li><strong>Montaje (mount):</strong> Comando para montar un sistema de archivos. Ejemplo: <code>sudo mount /dev/sdb1 /mnt</code>.</li>
+                                <li><strong>Desmontaje (umount):</strong> Comando para desmontar un dispositivo y liberar el punto de montaje. Ejemplo: <code>sudo umount /mnt</code>.</li>
+                            </ul>
+                        </section>
+
+                        <!-- Gestión de Dispositivos y Tipos -->
+                        <section>
+                            <header class="major">
+                                <h2>Gestión de Dispositivos</h2>
+                            </header>
+                            <p>Linux organiza los dispositivos de hardware mediante abstracciones de dispositivos de bloques y de caracteres.</p>
+                            <ul>
+                                <li><strong>Dispositivos de Bloques:</strong> Diseñados para almacenar datos en bloques, como discos duros y SSDs. Permiten leer y escribir datos en bloques de gran tamaño.</li>
+                                <li><strong>Dispositivos de Caracteres:</strong> Permiten leer y escribir datos en secuencias de caracteres, como teclados y ratones.</li>
+                            </ul>
+                        </section>
+
+                        <!-- Referencias Bibliográficas -->
+                        <section>
+                            <header class="major">
+                                <h2>Referencias Bibliográficas</h2>
+                            </header>
+                            <ul>
+                                <li>Eckert, J. (2017). <em>Linux+ Guide to Linux Certification</em>. Cengage Learning.</li>
+                                <li>Nemeth, E., Snyder, G., Hein, T., Whaley, B., & Mackin, D. (2017). <em>UNIX and Linux System Administration Handbook</em> (5th ed.). Addison-Wesley Professional.</li>
+                                <li>Love, R. (2010). <em>Linux Kernel Development</em> (3rd ed.). Addison-Wesley Professional.</li>
+                                <li>Sobell, M. G. (2018). <em>A Practical Guide to Linux Commands, Editors, and Shell Programming</em> (4th ed.). Pearson.</li>
+                                <li>The Linux Documentation Project. (n.d.). <em>The Linux System Administrator's Guide</em>.</li>
+                                <li>Mauerer, W. (2008). <em>Professional Linux Kernel Architecture</em>. Wiley Publishing.</li>
+                            </ul>
+                        </section>
+                    </section>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div id="sidebar">
+                <div class="inner">
+                    <!-- Search -->
+                    <section id="search" class="alt">
+                        <form method="post" action="#">
+                            <input type="text" name="query" id="query" placeholder="Search" />
+                        </form>
+                    </section>
+            
+                    <!-- Menu -->
+                    <nav id="menu">
+                        <header class="major">
+                            <h2>Menu</h2>
+                        </header>
+                        <ul>
+                            <li><a href="index.html">Homepage</a></li>
+                            <li><a href="HistoriaDeLinux.html">Historia</a></li>
+                            <li><a href="distribuciones.html">Distribuciones</a></li>
+                            <li><a href="arquitectura.html">Arquitectura</a></li>
+                            <li><a href="sistema_de_archivos.html">Sistemas de Archivos</a></li>
+                            <li><a href="gestion_procesos.html">Gestión de Procesos</a></li>
+                            <li><a href="ComandosBasicosDeNavegacion.html">Comandos Básicos</a></li>
+                            <li>
+                                <span class="opener">Comandos en LINUX</span>
+                                <ul>
+                                    <li><a href="ComandosBasicosDeNavegacion.html">Navegacion</a></li>
+                                    <li><a href="ComandosGestionArchivos.html">Gestión de archivos</a></li>
+                                    <li><a href="ComandosVisualizacionArchivos.html">Visualización de archivos</a></li>
+                                    <li><a href="ComandosCompresionEmpaquetado.html">Compresión y empaquetado</a></li>
+                                    <li><a href="ComandosGestionUsuariosPermisos.html">Gestión de usuarios y permisos</a></li>
+                                    <li><a href="ComandosRedConexion.html">Red y conexión</a></li>
+                                    <li><a href="ComandosProcesosSistema.html">Procesos y sistema</a></li>
+                                    <li><a href="ComandosInstalacionSoftware.html">Instalación de software</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+            
+                    <!-- Section -->
+                    <section>
+                        <header class="major">
+                            <h2>Contacto</h2>
+                        </header>
+                        <p>Para más información, puedes contactarnos a través de nuestras redes sociales o correo electrónico.</p>
+                        <ul class="contact">
+                            <li class="icon solid fa-envelope"><a href="#">info@linuxdistribuciones.com</a></li>
+                            <li class="icon solid fa-phone">(000) 000-0000</li>
+                            <li class="icon solid fa-home">1234 Linux Street<br />
+                                Ciudad, País 00000-0000</li>
+                        </ul>
+                    </section>
+            
+                    <!-- Footer -->
+                    <footer id="footer">
+                        <p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+                    </footer>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </body>
+</html>

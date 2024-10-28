@@ -27,6 +27,10 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block; }
 
+  .justified-text {
+    text-align: justify;
+  }
+
 body {
   line-height: 1; }
 
@@ -128,7 +132,9 @@ em, i {
   font-style: italic; }
 
 p {
-  margin: 0 0 2em 0; }
+  margin: 0 0 2em 0;
+  text-align: justify; 
+ }
 
 h1, h2, h3, h4, h5, h6 {
   color: #3d4449;

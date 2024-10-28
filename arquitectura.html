@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Arquitectura de Linux</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+    </head>
+    <body class="is-preload">
+
+        <!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Main --> 
+            <div id="main">
+                <div class="inner">
+
+                    <!-- Header -->
+                    <header id="header">
+                        <a href="index.html" class="logo"><strong>Arquitectura de Linux</strong></a>
+                        <ul class="icons">
+                            <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                            <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                            <li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+                            <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                            <li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+                        </ul>
+                    </header>
+
+                    <!-- Content -->
+                    <section>
+                        <header class="main">
+                            <h1>Arquitectura de Linux</h1>
+                        </header>
+
+                        <p>La arquitectura de Linux está compuesta por varios componentes clave que trabajan en conjunto para gestionar recursos, ejecutar aplicaciones y proporcionar una interfaz eficiente entre el hardware y el software. A continuación, exploraremos los elementos principales de la arquitectura de Linux, explicando cómo cada uno contribuye al funcionamiento del sistema.</p>
+
+                        <!-- Kernel -->
+                        <section>
+                            <header class="major">
+                                <h2>El Kernel de Linux</h2>
+                            </header>
+                            <p>El kernel es el núcleo del sistema operativo Linux, responsable de gestionar la comunicación entre el hardware y el software. Actúa como un intermediario que controla todos los recursos del sistema, como el procesador, la memoria y los dispositivos periféricos. Existen varios tipos de kernels, pero Linux es un kernel monolítico, lo que significa que todos los controladores de hardware y servicios esenciales están integrados en el propio kernel.</p>
+
+                            <h3>Componentes del Kernel</h3>
+                            <ul>
+                                <li><strong>Gestión de procesos:</strong> El kernel controla la creación, programación y finalización de los procesos, asegurando que cada proceso tenga acceso equitativo a la CPU.</li>
+                                <li><strong>Gestión de la memoria:</strong> El kernel se encarga de asignar y gestionar la memoria para los programas en ejecución, optimizando su uso y evitando conflictos.</li>
+                                <li><strong>Controladores de dispositivos:</strong> Los controladores permiten que el kernel interactúe con el hardware, traduciendo las señales de los dispositivos en un formato que el sistema operativo pueda entender.</li>
+                                <li><strong>Gestión del sistema de archivos:</strong> El kernel soporta una amplia variedad de sistemas de archivos, permitiendo el acceso a datos almacenados en discos duros, SSDs, y otros medios.</li>
+                                <li><strong>Seguridad y permisos:</strong> A través de mecanismos como los permisos de archivo y SELinux, el kernel controla el acceso a los recursos del sistema, protegiendo los datos y los procesos críticos.</li>
+                            </ul>
+                        </section>
+
+                        <!-- Espacio de Usuario -->
+                        <section>
+                            <header class="major">
+                                <h2>Espacio de Usuario y Espacio del Kernel</h2>
+                            </header>
+                            <p>En la arquitectura de Linux, el sistema se divide en dos áreas principales: el espacio de usuario y el espacio del kernel. Esta división garantiza que los programas de usuario no interfieran directamente con el funcionamiento del kernel, proporcionando una capa de seguridad y estabilidad.</p>
+
+                            <h3>Espacio de Usuario</h3>
+                            <p>El espacio de usuario es donde se ejecutan las aplicaciones y los procesos que no tienen acceso directo al hardware. Aquí es donde las aplicaciones de usuario como navegadores web, editores de texto y juegos funcionan. Las aplicaciones solicitan servicios del kernel a través de llamadas al sistema.</p>
+
+                            <h3>Espacio del Kernel</h3>
+                            <p>El espacio del kernel es la región de la memoria donde se ejecuta el propio kernel y los controladores del sistema. Todas las operaciones sensibles y críticas, como la gestión de memoria y la interacción con el hardware, se realizan aquí. El espacio del kernel es inaccesible directamente por las aplicaciones de usuario, lo que previene errores y vulnerabilidades potenciales.</p>
+                        </section>
+
+                        <!-- Sistemas de Archivos -->
+                        <section>
+                            <header class="major">
+                                <h2>Sistemas de Archivos en Linux</h2>
+                            </header>
+                            <p>El sistema de archivos en Linux proporciona una estructura organizada para almacenar y recuperar datos. Existen varios sistemas de archivos compatibles con Linux, cada uno diseñado para diferentes necesidades, desde alto rendimiento hasta confiabilidad en entornos críticos.</p>
+
+                            <h3>Sistemas de Archivos Comunes</h3>
+                            <ul>
+                                <li><strong>Ext4:</strong> Es el sistema de archivos por defecto en muchas distribuciones de Linux. Ofrece alta fiabilidad, buen rendimiento y una capacidad para manejar grandes volúmenes de datos.</li>
+                                <li><strong>XFS:</strong> Un sistema de archivos de alto rendimiento que es popular en servidores y entornos empresariales. Está diseñado para manejar grandes cantidades de datos y puede recuperarse rápidamente de fallos.</li>
+                                <li><strong>Btrfs:</strong> Diseñado para ofrecer características avanzadas como la instantánea y la capacidad de redimensionar volúmenes dinámicamente. Es una opción popular en sistemas que requieren la gestión flexible del almacenamiento.</li>
+                            </ul>
+
+                            <h3>Estructura del Sistema de Archivos</h3>
+                            <p>El sistema de archivos de Linux sigue una estructura jerárquica, con un único árbol de directorios que comienza en la raíz, representada por "/". A continuación, algunos de los directorios principales:</p>
+                            <ul>
+                                <li><strong>/bin:</strong> Contiene los binarios esenciales que son necesarios para el arranque del sistema y su operación básica.</li>
+                                <li><strong>/etc:</strong> Contiene archivos de configuración del sistema.</li>
+                                <li><strong>/home:</strong> Directorio donde se almacenan los archivos y configuraciones personales de los usuarios.</li>
+                                <li><strong>/var:</strong> Contiene archivos que varían con el tiempo, como logs y bases de datos.</li>
+                            </ul>
+                        </section>
+
+                        <!-- Gestión de Dispositivos -->
+                        <section>
+                            <header class="major">
+                                <h2>Gestión de Dispositivos</h2>
+                            </header>
+                            <p>Linux gestiona los dispositivos de hardware mediante un modelo de abstracción conocido como dispositivos de bloques y dispositivos de caracteres. Los controladores de dispositivo proporcionan la interfaz necesaria para que el kernel interactúe con el hardware sin que las aplicaciones de usuario necesiten preocuparse por los detalles técnicos de los dispositivos.</p>
+
+                            <h3>Tipos de Dispositivos</h3>
+                            <ul>
+                                <li><strong>Dispositivos de Bloques:</strong> Se utilizan para dispositivos que almacenan datos en bloques, como discos duros y SSDs. Los accesos a estos dispositivos se realizan en bloques de datos, lo que permite leer y escribir en grandes cantidades de datos a la vez.</li>
+                                <li><strong>Dispositivos de Caracteres:</strong> Estos dispositivos permiten la lectura y escritura de datos carácter por carácter, como es el caso de los teclados, ratones y puertos serie.</li>
+                            </ul>
+                        </section>
+
+                        <!-- Referencias Bibliográficas -->
+                        <section>
+                            <header class="major">
+                                <h2>Referencias Bibliográficas</h2>
+                            </header>
+                            <ul>
+                                <li>Love, R. (2010). <em>Linux Kernel Development</em> (3rd ed.). Addison-Wesley Professional.</li>
+                                <li>Nemeth, E., Snyder, G., Hein, T., & Whaley, B. (2017). <em>UNIX and Linux System Administration Handbook</em>. Addison-Wesley Professional.</li>
+                                <li>Ward, B. (2014). <em>How Linux Works, 2nd Edition: What Every Superuser Should Know</em>. No Starch Press.</li>
+                                <li>Silberschatz, A., Galvin, P. B., & Gagne, G. (2018). <em>Operating System Concepts</em> (9th ed.). John Wiley & Sons.</li>
+                                <li>Corbet, J., Rubini, A., & Kroah-Hartman, G. (2005). <em>Linux Device Drivers</em> (3rd ed.). O'Reilly Media.</li>
+                            </ul>
+                        </section>
+
+                    </section>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div id="sidebar">
+                <div class="inner">
+                    <!-- Search -->
+                    <section id="search" class="alt">
+                        <form method="post" action="#">
+                            <input type="text" name="query" id="query" placeholder="Search" />
+                        </form>
+                    </section>
+            
+                    <!-- Menu -->
+                    <nav id="menu">
+                        <header class="major">
+                            <h2>Menu</h2>
+                        </header>
+                        <ul>
+                            <li><a href="index.html">Homepage</a></li>
+                            <li><a href="HistoriaDeLinux.html">Historia</a></li>
+                            <li><a href="distribuciones.html">Distribuciones</a></li>
+                            <li><a href="arquitectura.html">Arquitectura</a></li>
+                            <li><a href="sistema_de_archivos.html">Sistemas de Archivos</a></li>
+                            <li><a href="gestion_procesos.html">Gestión de Procesos</a></li>
+                            <li><a href="ComandosBasicosDeNavegacion.html">Comandos Básicos</a></li>
+                            <li>
+                                <span class="opener">Comandos en LINUX</span>
+                                <ul>
+                                    <li><a href="ComandosBasicosDeNavegacion.html">Navegacion</a></li>
+                                    <li><a href="ComandosGestionArchivos.html">Gestión de archivos</a></li>
+                                    <li><a href="ComandosVisualizacionArchivos.html">Visualización de archivos</a></li>
+                                    <li><a href="ComandosCompresionEmpaquetado.html">Compresión y empaquetado</a></li>
+                                    <li><a href="ComandosGestionUsuariosPermisos.html">Gestión de usuarios y permisos</a></li>
+                                    <li><a href="ComandosRedConexion.html">Red y conexión</a></li>
+                                    <li><a href="ComandosProcesosSistema.html">Procesos y sistema</a></li>
+                                    <li><a href="ComandosInstalacionSoftware.html">Instalación de software</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+            
+                    <!-- Section -->
+                    <section>
+                        <header class="major">
+                            <h2>Contacto</h2>
+                        </header>
+                        <p>Para más información, puedes contactarnos a través de nuestras redes sociales o correo electrónico.</p>
+                        <ul class="contact">
+                            <li class="icon solid fa-envelope"><a href="#">info@linuxdistribuciones.com</a></li>
+                            <li class="icon solid fa-phone">(000) 000-0000</li>
+                            <li class="icon solid fa-home">1234 Linux Street<br />
+                                Ciudad, País 00000-0000</li>
+                        </ul>
+                    </section>
+            
+                    <!-- Footer -->
+                    <footer id="footer">
+                        <p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+                    </footer>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </body>
+</html>
