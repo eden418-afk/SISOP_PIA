@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Virtualización</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Hablemos de LINUX</strong> por Equipo 2</a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Virtualización En Linux</h1>
+									</header>
+
+									<span class="image main"><img src="images/Virtualizacion/virtualizacionLinux.webp" alt="Virtualización en Linux" height="500" /></span>
+
+									<p>La virtualización en Linux es una tecnología que permite ejecutar múltiples sistemas operativos en una sola máquina física, compartiendo los recursos del hardware de forma eficiente. Esta técnica crea "máquinas virtuales" (VM) en las que cada una actúa como si fuera un sistema independiente con su propio sistema operativo, aplicaciones y recursos asignados. </p>
+									
+									<hr class="major" />
+
+									<h2>KVM (Kernel-based Virtual Machine)</h2>
+									<p><span class="image left"><img src="images/Virtualizacion/KVM.jpg" alt="" /></span>
+										KVM (para máquina virtual basada en kernel) es una solución de virtualización completa para Linux en hardware x86 que contiene extensiones de virtualización (Intel VT o AMD-V). Consiste en un módulo de kernel cargable, kvm.ko, que proporciona la infraestructura de virtualización central y un módulo específico del procesador, kvm-intel.ko o kvm-amd.ko.
+										<br><br>
+										Con KVM, se pueden ejecutar varias máquinas virtuales que ejecutan imágenes de Linux o Windows sin modificar. Cada máquina virtual tiene hardware virtualizado privado: una tarjeta de red, disco, adaptador gráfico, etc.
+										<br><br>
+										KVM es un software de código abierto. El componente del kernel de KVM se incluye en la línea principal de Linux, a partir del 2.6.20. El componente de espacio de usuario de KVM está incluido en la línea principal QEMU, a partir de 1.3.										
+									</p>
+
+									<div class="row">
+										<div class="col-6 col-12-small">
+											<h3>Ventajas</h3>
+											<ul>
+												<li>Alto rendimiento, ya que se ejecuta directamente sobre el hardware.</li>
+												<li>Soporta una amplia variedad de sistemas operativos invitados.</li>
+												<li>Integración con herramientas de gestión como libvirt.</li>
+											</ul>
+										</div>
+										<div class="col-6 col-12-small">
+											<h3>Desventajas</h3>
+											<ul style="text-align: justify;">
+												<li>Solo puede utilizarse en máquinas que tengan procesadores compatibles, lo que limita su uso en hardware más antiguo o menos potente.</li>
+												<li >Algunas aplicaciones no están optimizadas para funcionar en entornos virtualizados KVM.</li>
+												<li>Aunque KVM es eficiente, puede consumir más recursos que otros hipervisores de tipo 1.</li>
+											</ul>
+										</div>
+									</div>
+									
+									<hr class="major" />
+
+									<h2>VirtualBox</h2>
+									<p><span class="image right"><img src="images/Virtualizacion/virtualBox.png" alt="" /></span>
+										VirtualBox es un software de virtualización multiplataforma. Permite a los usuarios ampliar su computadora existente para ejecutar múltiples sistemas operativos, incluidos Microsoft Windows, Mac OS X, Linux y Oracle Solaris, al mismo tiempo. 
+										<br><br>
+										Diseñado para desarrolladores y profesionales de TI, VirtualBox es ideal para probar, desarrollar, demostrar, e implementar soluciones en múltiples plataformas desde una sola máquina; aprovechar las innovaciones introducidas en el sistema x86 moderno plataforma de hardware, es liviana y fácil de instalar y usar. 
+									</p>
+									<div class="row">
+										<div class="col-6 col-12-small">
+											<h3>Ventajas</h3>
+											<ul>
+												<li>Interfaz gráfica amigable, lo que facilita su uso.</li>
+												<li>Soporta una amplia gama de sistemas operativos.</li>
+												<li>Ideal para entornos de desarrollo y pruebas.</li>
+											</ul>
+										</div>
+										<div class="col-6 col-12-small">
+											<h3>Desventajas</h3>
+											<ul style="text-align: justify;">
+												<li>Tiende a consumir más recursos del sistema y ofrece un rendimiento inferior, especialmente en entornos de alta carga. </li>
+												<li>funcionalidades avanzadas, como soporte de red en modo puente (bridged networking), arranque PXE, o clonación avanzada, están limitadas o ausentes en la versión gratuita de VirtualBox.</li>
+												<li>Es un hipervisor de tipo 2 (de nivel de usuario), lo que significa que se ejecuta en el sistema operativo host y depende de él para la gestión de recursos.</li>
+											</ul>
+										</div>
+									</div>
+									<div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+										<span><img src="/images/Virtualizacion/VirtualBoxVentajas.png" alt=""></span>
+									</div>
+									
+									<hr class="major" />
+
+									<h2>Docker</h2>
+									<p><span class="image right"><img src="images/Virtualizacion/docker.png" alt="" /></span>
+
+										La tecnología Docker utiliza el kernel de Linux y las características del kernel, como Cgroups y espacios de nombres, para segregar procesos para que puedan ejecutarse de forma independiente. 
+										<br><br>
+										Esta independencia es la intención de los contenedores: la capacidad de ejecutar múltiples procesos y aplicaciones por separado para hacer un mejor uso de su infraestructura y al mismo tiempo conservar la seguridad que tendría con sistemas separados.
+										<br><br>
+										Las herramientas de contenedor, incluido Docker, proporcionan un modelo de implementación basado en imágenes. Esto facilita compartir una aplicación o un conjunto de servicios con todas sus dependencias en múltiples entornos.
+ 										<br><br>
+										Docker también automatiza la implementación de la aplicación (o conjuntos combinados de procesos que componen una aplicación) dentro de este entorno de contenedor.
+
+									</p>
+									<div class="row">
+										<div class="col-6 col-12-small">
+											<h3>Ventajas</h3>
+											<ul style="text-align: justify;">
+												<li>Portabilidad, ya que los contenedores se pueden ejecutar en cualquier entorno compatible con Docker.</li>
+												<li>Eficiencia en el uso de recursos, ya que comparten el mismo núcleo del sistema operativo.</li>
+												<li>Facilita la escalabilidad y la gestión de microservicios.</li>
+											</ul>
+										</div>
+										<div class="col-6 col-12-small">
+											<h3>Desventajas</h3>
+											<ul style="text-align: justify;">
+												<li>Los contenedores de Docker están diseñados para ser efímeros, por lo que los datos guardados dentro del contenedor pueden perderse si este se detiene o se elimina.</li>	
+												<li>Comparte el mismo kernel entre todos los contenedores y el host, lo cual puede ser un riesgo de seguridad si se ejecutan contenedores de terceros o no confiables.</li>	
+												<li>Usa redes virtuales que pueden complicar la configuración y reducir el rendimiento de la red en Linux.</li>	
+											</ul>
+										</div>
+										
+									</div>
+									<div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+										<span><img src="/images/Virtualizacion/VentajasDocker.png" alt=""></span>
+									</div>
+																
+
+									<hr class="major" />
+									
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar-container"></div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

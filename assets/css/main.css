@@ -2286,3 +2286,10 @@ td{
   text-align: center;
   vertical-align: middle;
 }
+    /*Tabla de Versiones Linux*/
+    .VersionesLinux{
+      text-align: center;
+      text-align-last: center;
+      vertical-align: middle;
+      font-size: 20px;
+    }
