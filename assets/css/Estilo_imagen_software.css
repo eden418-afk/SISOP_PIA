@@ -1,0 +1,15 @@
+table {
+    width: 100%; 
+}
+
+td {
+    vertical-align: top; 
+    padding: 10px;
+}
+
+#A {
+    max-width: 200px; 
+    height: auto;
+    margin-top: 10px;
+}
+
