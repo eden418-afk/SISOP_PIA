@@ -44,7 +44,7 @@
 								<h3>Sintaxis</h3>
 								<p>ps [opciones]</p>
 								<h3>Ejemplo</h3>
-								<p>ps aux — Muestra todos los procesos en ejecución.</p>
+								<pre><code>ps aux — Muestra todos los procesos en ejecución.</code></pre>
 
 								<hr class="major" />
 
@@ -53,7 +53,7 @@
 								<h3>Sintaxis</h3>
 								<p>top</p>
 								<h3>Ejemplo</h3>
-								<p>top — Muestra los procesos y su uso de recursos como CPU y memoria.</p>
+								<pre><code>top — Muestra los procesos y su uso de recursos como CPU y memoria.</code></pre>
 
 								<hr class="major" />
 
@@ -62,7 +62,7 @@
 								<h3>Sintaxis</h3>
 								<p>kill [señal] [PID]</p>
 								<h3>Ejemplo</h3>
-								<p>kill -9 1234 — Termina el proceso con ID 1234.</p>
+								<pre><code>kill -9 1234 — Termina el proceso con ID 1234.</code></pre>
 
 								<hr class="major" />
 
@@ -71,7 +71,7 @@
 								<h3>Sintaxis</h3>
 								<p>df [opciones]</p>
 								<h3>Ejemplo</h3>
-								<p>df -h — Muestra el uso de disco en formato legible (human-readable).</p>
+								<pre><code>df -h — Muestra el uso de disco en formato legible (human-readable).</code></pre>
 
 								<hr class="major" />
 
@@ -80,7 +80,7 @@
 								<h3>Sintaxis</h3>
 								<p>du [opciones] [ruta]</p>
 								<h3>Ejemplo</h3>
-								<p>du -sh /home/usuario — Muestra el tamaño total de la carpeta /home/usuario.</p>
+								<pre><code>du -sh /home/usuario — Muestra el tamaño total de la carpeta /home/usuario.</code></pre>
 																	
 							</section>
 
@@ -88,7 +88,53 @@
 					</div>
 
 				<!-- Sidebar -->
-					<div id="sidebar-container"></div>
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+							<nav id="menu">
+								<header class="major">
+									<h2>Menu</h2>
+								</header>
+								<ul>
+									<li><a href="index.html">Homepage</a></li>
+									<li><a href="HistoriaDeLinux.html">Historia</a></li>
+									<li><a href="distribuciones.html">Distribuciones</a></li>
+									<li><a href="arquitectura.html">Arquitectura</a></li>
+									<li><a href="sistema_de_archivos.html">Sistemas de Archivos</a></li>
+									<li><a href="gestion_procesos.html">Gestión de Procesos</a></li>
+									<li>
+										<span class="opener">Comandos en LINUX</span>
+										<ul>
+											<li><a href="ComandosBasicosDeNavegacion.html">Navegacion</a></li>
+											<li><a href="ComandosGestionArchivos.html">Gestión de archivos</a></li>
+											<li><a href="ComandosVisualizacionArchivos.html">Visualización de archivos</a></li>
+											<li><a href="ComandosCompresionEmpaquetado.html">Compresión y empaquetado</a></li>
+											<li><a href="ComandosGestionUsuariosPermisos.html">Gestión de usuarios y permisos</a></li>
+											<li><a href="ComandosRedConexion.html">Red y conexión</a></li>
+											<li><a href="ComandosProcesosSistema.html">Procesos y sistema</a></li>
+											<li><a href="ComandosInstalacionSoftware.html">Instalación de software</a></li>
+										</ul>
+									</li>
+									<li><a href="Virtualizacion.html"></a></li>
+									<li><a href="EntornosGraficos.html">Entornos Gráficos</a></li>
+								</ul>
+							</nav>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Equipo 2.</p>
+								</footer>
+
+						</div>
+					</div>
 
 			</div>
 
@@ -98,6 +144,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/sidebar.js"></script>
+
 	</body>
 </html>

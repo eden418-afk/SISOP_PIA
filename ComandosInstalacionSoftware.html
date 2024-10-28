@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Comandos básicos de navegacion</title>
+		<title>Comandos de instalacion de software</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -35,7 +35,7 @@
 
 								<span class="image main"><img src="images/linux.jpg" alt="" /></span>
 
-								<p>Los comandos de LINUX permiten al usuario controlar el sistema desde la interfaz de linea de comandos (CLI) en lugar de utilizar una interfaz con iconos. Estos son instrucciones de texto introducidas en la terminar para indicarle al sistema operativo exactamente qu es lo que se tiene que hacer. Los comandos que se ingresan en la terminal de LINUX se distinguen entre mayúsculas y minúsculas, ademas de seguir una sintaxis.</p>
+								Los comandos de LINUX permiten al usuario controlar el sistema desde la interfaz de linea de comandos (CLI) en lugar de utilizar una interfaz con iconos. Estos son instrucciones de texto introducidas en la terminar para indicarle al sistema operativo exactamente qu es lo que se tiene que hacer. Los comandos que se ingresan en la terminal de LINUX se distinguen entre mayúsculas y minúsculas, ademas de seguir una sintaxis.
 								
 								<hr class="major" />
 
@@ -44,7 +44,7 @@
 								<h3>Sintaxis</h3>
 								<p>apt-get [opciones] [paquete]</p>
 								<h3>Ejemplo</h3>
-								<p>sudo apt-get install vim — Instala el editor vim.</p>
+								<pre><code>sudo apt-get install vim — Instala el editor vim.</code></pre>
 
 								<hr class="major" />
 
@@ -53,7 +53,7 @@
 								<h3>Sintaxis</h3>
 								<p>yum [opciones] [paquete]</p>
 								<h3>Ejemplo</h3>
-								<p>sudo yum install httpd — Instala el servidor web Apache en sistemas basados en Red Hat.</p>
+								<pre><code>sudo yum install httpd — Instala el servidor web Apache en sistemas basados en Red Hat.</code></pre>
 
 								<hr class="major" />
 
@@ -62,7 +62,7 @@
 								<h3>Sintaxis</h3>
 								<p>dpkg [opciones] [paquete]</p>
 								<h3>Ejemplo</h3>
-								<p>sudo dpkg -i paquete.deb — Instala el paquete .deb.</p>
+								<pre><code>sudo dpkg -i paquete.deb — Instala el paquete .deb.</code></pre>
 
 								<hr class="major" />
 
@@ -71,7 +71,7 @@
 								<h3>Sintaxis</h3>
 								<p>rpm [opciones] [paquete]</p>
 								<h3>Ejemplo</h3>
-								<p>sudo rpm -ivh paquete.rpm — Instala el paquete .rpm.</p>
+								<pre><code>sudo rpm -ivh paquete.rpm — Instala el paquete .rpm.</code></pre><p>sudo rpm -ivh paquete.rpm — Instala el paquete .rpm.</p>
 								
 							</section>
 
@@ -79,7 +79,53 @@
 					</div>
 
 				<!-- Sidebar -->
-					<div id="sidebar-container"></div>
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+							<nav id="menu">
+								<header class="major">
+									<h2>Menu</h2>
+								</header>
+								<ul>
+									<li><a href="index.html">Homepage</a></li>
+									<li><a href="HistoriaDeLinux.html">Historia</a></li>
+									<li><a href="distribuciones.html">Distribuciones</a></li>
+									<li><a href="arquitectura.html">Arquitectura</a></li>
+									<li><a href="sistema_de_archivos.html">Sistemas de Archivos</a></li>
+									<li><a href="gestion_procesos.html">Gestión de Procesos</a></li>
+									<li>
+										<span class="opener">Comandos en LINUX</span>
+										<ul>
+											<li><a href="ComandosBasicosDeNavegacion.html">Navegacion</a></li>
+											<li><a href="ComandosGestionArchivos.html">Gestión de archivos</a></li>
+											<li><a href="ComandosVisualizacionArchivos.html">Visualización de archivos</a></li>
+											<li><a href="ComandosCompresionEmpaquetado.html">Compresión y empaquetado</a></li>
+											<li><a href="ComandosGestionUsuariosPermisos.html">Gestión de usuarios y permisos</a></li>
+											<li><a href="ComandosRedConexion.html">Red y conexión</a></li>
+											<li><a href="ComandosProcesosSistema.html">Procesos y sistema</a></li>
+											<li><a href="ComandosInstalacionSoftware.html">Instalación de software</a></li>
+										</ul>
+									</li>
+									<li><a href="Virtualizacion.html"></a></li>
+									<li><a href="EntornosGraficos.html">Entornos Gráficos</a></li>
+								</ul>
+							</nav>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Equipo 2.</p>
+								</footer>
+
+						</div>
+					</div>
 
 			</div>
 
@@ -89,6 +135,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/sidebar.js"></script>
+
 	</body>
 </html>
