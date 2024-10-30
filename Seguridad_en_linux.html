@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguridad en linux</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+</head>
+<body class="is-preload">
+    <div id="wrapper">
+
+        <!-- Main -->
+            <div id="main">
+                <div class="inner">
+
+                    <!-- Header -->
+                        <header id="header">
+                            <a href="index.html" class="logo"><strong>Hablemos de LINUX</strong> por Equipo 2</a>
+                            <ul class="icons">
+                                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                                <li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+                                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                                <li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+                            </ul>
+                        </header>
+
+                    <!-- Content -->
+                        <section>
+                            <header class="main">
+                                <h1>Seguridad en linux</h1>
+                            </header>
+
+                            <span class="image main"><img src="images/Seguridad.jpg" alt="" /></span>
+
+                            <p>La seguridad en Linux es un pilar fundamental para la administración efectiva de sistemas, protegiendo contra accesos no autorizados, pérdida de datos, y otros vectores de ataque.</p>
+                            
+                            <hr class="major" />
+
+                            <h2>Sistemas de autentificación</h2>
+                            <p>Es un proceso mediante el cual se verifica la identidad de un usuario o sistema antes de permitir el acceso a determinados recursos o servicios.</p>
+                            <p>Los métodos de autenticación pueden clasificarse en tres grupos, en función de lo que utilizan para verificar la identidad:</p>
+                            <ul>
+                                <li>Algo que el usuario sabe</li>
+                                <li>Algo que el usuario posee</li>
+                                <li>Una característica física del usuario</li>
+                            </ul>
+                           
+                            <hr class="major" />
+                            <ul>
+                               <li><h3>Sistemas basados en algo conocido:</h3></li>
+                                    <p>
+                                        En él se decide que un usuario es quien dice ser si conoce una palabra o serie de caracteres, que sólo debe conocer el usuario.
+                                        Esta información que conoce el usuario debe mantenerla en secreto sino el sistema perdería toda fuerza, debido a que cualquiera que la conozca podría suplantar su identidad,
+                                        a pesar de todos los inconvenientes que esto podría generar es uno de los métodos de autentificación más usados, para combatir sus defectos se combina junta a otros pasos como agregar un número telefónico o un código.
+                                    </p>
+                                    <img src="https://lilacstrategy.com/images/lilac/blog/Password.gif" style="width: 200px; height: 210px; margin-left: 200px;"></img>
+                                    <img src="images/Algo_conocido.jpg" style="width: 240px; height: 210px; margin-left: 250px; border-radius: 20px; ">
+                                    <hr class="major" />
+
+                                 <li><h3>Sistemas basados en algo poseído</h3></li>
+                                    <p>
+                                        Este sistema basa basa su funcionamiento en la posesión por parte del usuario de un objeto único.
+                                        en esta categoría podemos incluir desde una llave para una cerradura común y corriente hasta una tarjeta inteligente con alta encriptación,
+                                        para poder acceder a un sistema que use este tipo de debemos estar registrados en él, de esta manera el sistema reconoce nuestra identidad.
+                                    </p>
+                                    <img src="images/identificacion.jpg" style="margin-left: 300px; width:200px; height:300px; border-radius: 20px;">
+                                    <img src="https://media.cnn.com/api/v1/images/stellar/prod/cnne-1456469-door-lock-1.gif?q=w_1110,c_fill" style=" margin-left: 100px; width:200px; height:300px;">
+                                    <hr class="major" />
+                                 <li><h3>Sistemas de autentificación biométrica </h3></li>
+                                 <p>
+                                    Existen sistemas donde no se aplica de forma tan necesaria la criptografía, sino que establecen sus criterios de acceso mediante el reconocimiento de una característica física humana,
+                                    desde la huella dactilar hasta el análisis de retina existen numerosos métodos, las razones por las que estos sistemas no están altamente difundidos es su coste; imposible de asumir para una pequeña entidad, y su dificultad de mantenimiento.
+                                 </p> 
+                                 <img src="images/biometrica.jpg" style="width: 200px; height: 210px; margin-left: 200px; border-radius: 20px;"></img>  
+                                 <img src="https://media.licdn.com/dms/image/D4E12AQH2T7YwbCxhGg/article-cover_image-shrink_720_1280/0/1687006915386?e=2147483647&v=beta&t=VPcrlQTvZaRy6a4Aw1Y8Tt5PUxsltAFyA8rMy-Fn0q4" style=" margin-left: 200px; width:200px; height:220px; border-radius:20px;">
+                            </ul>
+                            <hr class="major" />
+                            
+                            <h2>Cifrado</h2>
+                            <p>
+                                En sistemas operativos Linux tenemos muchas opciones para cifrar datos en Linux, por ejemplo, podemos usar dm-crypt, LUKS, eCryptfs e incluso programas como Veracrypt que son realmente versátiles y muy recomendables,
+                                en este caso nos centraremos en LUKS (Linux Unified Key Setup) que nos permite cifrar discos, particiones y también volúmenes lógicos que nosotros creemos en nuestro equipo. 
+                            </p>
+                            <ul>
+                                <li><h3>Sistema de cifrado</h3></li>
+                                <p>
+                                    En el caso de LUKS se utiliza una herramienta que utiliza el cifrado AES (Advanced Encryption Standard) para proteger los datos de los discos duros, AES es un algoritmo de cifrado simétrico, que utiliza bloques de cifrado de 128 bits, 198 bits o 256 bits,
+                                    cuando LUKS almacena los datos en bloques este almacena la información de cada bloque de datos de forma individual,
+                                    esto tiene la ventaja de que se puede utilizar en prácticamente cualquier sistema de archivos, haciendo de esta herramienta una solución muy flexible.
+                                </p>
+                                <li><h3>Objetivo de cifrar los datos</h3></li>
+                                <p>
+                                    El cifrado de los discos, particiones o archivos tiene un objetivo claro, aplicarles un algoritmo a estos con el fin de que la información que tenga solo pueda ser inteligible por nosotros,
+                                    esto se realiza aplicando un formato diferente al que tenía con tal de proteger la información de los archivos, particiones o discos,
+                                    de esta manera, los usuarios al disponer de las credenciales pueden proteger esta información y solamente ellos tendrían el acceso al contar, como lo puede ser una contraseña.
+                                </p>
+                                
+                                <img src="https://macoratti.net/16/08/asymmetric-encryption.gif" style="margin-left:200px;">
+                            </ul>
+                            <hr class="major" />
+                            <h2>Comandos</h2>
+                            
+                            
+                        </section>
+
+                </div>
+            </div>
+
+        <!-- Sidebar -->
+            <div id="sidebar">
+                <div class="inner">
+
+                    <!-- Search -->
+                        <section id="search" class="alt">
+                            <form method="post" action="#">
+                                <input type="text" name="query" id="query" placeholder="Search" />
+                            </form>
+                        </section>
+
+                    <!-- Menu -->
+                        <nav id="menu">
+                            <header class="major">
+                                <h2>Menu</h2>
+                            </header>
+                            <ul>
+                                <li><a href="index.html">Homepage</a></li>
+                                <li><a href="HistoriaDeLinux.html">Historia</a></li>
+                                <li><a href="generic.html">Generic</a></li>
+                                <li><a href="elements.html">Elements</a></li>
+                                <li>
+                                    <span class="opener">Comandos en LINUX</span>
+                                    <ul>
+                                        <li><a href="ComandosBasicosDeNavegacion.html">Navegacion</a></li>
+                                        <li><a href="#">Gestión de archivos</a></li>
+                                        <li><a href="#">Visualización de archivos</a></li>
+                                        <li><a href="#">Compresión y empaquetado</a></li>
+                                        <li><a href="#">Gestión de usuarios y permisos</a></li>
+                                        <li><a href="#">Red y conexión</a></li>
+                                        <li><a href="#">Procesos y sistema</a></li>
+                                        <li><a href="#">Instalación de software</a></li>
+                                        <li><a href="#"></a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Etiam Dolore</a></li>
+                                <li><a href="Instalacion_de_software_en_linux.html">Instalacion de software en linux</a></li>
+                                <li>
+                                    <span class="opener">Another Submenu</span>
+                                    <ul>
+                                        <li><a href="#">Lorem Dolor</a></li>
+                                        <li><a href="#">Ipsum Adipiscing</a></li>
+                                        <li><a href="#">Tempus Magna</a></li>
+                                        <li><a href="#">Feugiat Veroeros</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Maximus Erat</a></li>
+                                <li><a href="Linux_en_servidores.html">Linux en servidores</a></li>
+                                <li><a href="#">Amet Lacinia</a></li>
+                            </ul>
+                        </nav>
+
+                    <!-- Footer -->
+                        <footer id="footer">
+                            <p class="copyright">&copy; Equipo 2.</p>
+                        </footer>
+
+                </div>
+            </div>
+
+    </div>
+
+<!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
