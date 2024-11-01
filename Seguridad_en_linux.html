@@ -101,8 +101,72 @@
                             </ul>
                             <hr class="major" />
                             <h2>Comandos</h2>
-                            
-                            
+                            <div class="table-wrapper">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Comando</th>
+                                            <th>Descripcion</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><img src="images/comando1.png" style="clip-path: inset(20% 50% 20% 0%); filter: brightness(1.8);transform: scale(1.1);"></td>
+                                            <td>Si queremos comprobar las particiones que tenemos creadas, ponemos el comando lsblk--fs</td>
+                                        </tr>												
+                                        <tr>
+                                            <td><img src="images/comando2.jpg.png" style="clip-path: inset(20% 50% 20% 0%); filter: brightness(1.8);transform: scale(1.1);"></td>
+                                            <td>Si queremos ver las características de LUKS (algoritmo de cifrado simétrico usado, longitud de clave ,etc), ponemos el siguiente comando: cryptsetup luksDump /dev/sda5</td>
+                                        </tr>																
+                                        															
+                                    </tbody>											
+                                </table>
+                            </div>
+                           <hr style="visibility: hidden;">
+                            <h2>Cifrar cualquier disco o partición (con pérdida de datos)</h2>
+                            <ol>
+                                <li>
+                                    <p>Lo primero que tenemos que hacer es crear una nueva partición en el disco, para posteriormente utilizarla, ejecutamos el siguiente comando: </p>
+                                    <img src="images/comando3.png"style="margin-bottom:30px; margin-left:300px ;filter: brightness(1.8);contrast(1.1); transform: scale(1.4);">
+                                </li>
+                                <li>
+                                    <p>
+                                        Y continuamos poniendo «n» para crear una nueva partición, ponemos «p» para hacerla primaria, y aceptamos los valores que nos indican para tener una partición de todo el disco duro, si queremos hacerla más pequeña, tendremos que modificar los sectores para esta partición en concreto.
+                                    </p>
+                                    <img src="images/comando4.png"style="margin-bottom:30px; margin-left:300px ;">
+                                </li>
+                                <li>
+                                    <p>
+                                        Una vez que hayamos hecho esto, deberemos poner la partición sdb1 recién creada con el formato LUKS, para ello ejecutamos el siguiente comando:
+                                    </p>
+                                    <img src="images/comando5.png"style="margin-bottom:30px; margin-left:300px ;filter: brightness(1.8);contrast(1.1); transform: scale(1.4);">
+                                </li>
+                                <li>
+                                    <p>
+                                        Ponemos «YES» en mayúsculas, introducimos la clave que queremos, y esperamos hasta que esté listo.
+                                    </p>
+                                    <img src="images/comando6.png"style="margin-bottom:30px; margin-left:300px ;">
+                                </li>
+                                <li>
+                                    <p>
+                                        Si ejecutamos este comando podremos ver todos los discos duros, las particiones y el sistema de archivos que estamos utilizando. 
+                                    </p>
+                                    <img src="images/comando7.png"style="margin-bottom:30px; margin-left:300px ;filter: brightness(1.8);contrast(1.1); transform: scale(1.4);">
+                                </li>
+                                <li>
+                                    <p>
+                                        Una vez que lo hayamos hecho, tendremos que abrir la partición con LUKS que acabamos de crear, para poder realizar esto ponemos el siguiente comando:
+                                    </p>
+                                    <img src="images/comando8.png"style="margin-bottom:30px; margin-left:300px ;filter: brightness(1.8);contrast(1.1); transform: scale(1.4);">
+                                </li>
+                                <li>
+                                    <p>
+                                        Introducimos la contraseña, y a continuación volvemos a ejecutar el «lsblk -f» y nos aparecerá «particioncifrada» que es el nombre identificador que le hemos dado, pero podemos cambiarlo en cualquier momento.
+                                    </p>
+                                    <img src="images/comando9.png"style="margin-bottom:30px; margin-left:300px ;">
+                                </li>
+                            </ol>
                         </section>
 
                 </div>
