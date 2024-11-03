@@ -17,7 +17,7 @@
 
                     <!-- Header -->
                     <header id="header">
-                        <a href="index.html" class="logo"><strong>Distribuciones de Linux</strong></a>
+                        <a href="index.html" class="logo"><strong>Hablemos de LINUX</strong> por Equipo 2</a>
                         <ul class="icons">
                             <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
                             <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
@@ -232,7 +232,52 @@
             </div>
 
             <!-- Sidebar -->
-            <div id="sidebar-container"></div>
+            <div id="sidebar">
+                <div class="inner">
+                    
+                    <!-- Menú -->
+                    <nav id="menu">
+                        <header class="major">
+                            <h2>Menú</h2>
+                        </header>
+                        <ul>
+                            <li><a href="index.html">Homepage</a></li>
+                            <li><a href="HistoriaDeLinux.html">Historia</a></li>
+                            <li><a href="distribuciones.html">Distribuciones</a></li>
+                            <li><a href="arquitectura.html">Arquitectura</a></li>
+                            <li>
+                                <span class="opener">Comandos en LINUX</span>
+                                <ul>
+                                    <li><a href="ComandosBasicosDeNavegacion.html">Navegación</a></li>
+                                    <li><a href="ComandosGestionArchivos.html">Gestión de archivos</a></li>
+                                    <li><a href="ComandosVisualizacionArchivos.html">Visualización de archivos</a></li>
+                                    <li><a href="ComandosCompresionEmpaquetado.html">Compresión y empaquetado</a></li>
+                                    <li><a href="ComandosGestionUsuariosPermisos.html">Gestión de usuarios y permisos</a></li>
+                                    <li><a href="ComandosRedConexion.html">Red y conexión</a></li>
+                                    <li><a href="ComandosProcesosSistema.html">Procesos y sistema</a></li>
+                                    <li><a href="ComandosInstalacionSoftware.html">Instalación de software</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="GestionUsuariosPermisos.html">Gestión de usuarios y permisos</a></li>
+                            <li><a href="sistema_de_archivos.html">Sistemas de Archivos</a></li>
+                            <li><a href="gestion_procesos.html">Gestión de Procesos</a></li>
+                            <li><a href="Seguridad_en_linux.html">Seguridad en Linux</a></li>
+                            <li><a href="Instalacion_de_software_en_linux.html">Instalación de software</a></li>
+                            <li><a href="EntornosGraficos.html">Entornos Gráficos</a></li>                
+                            <li><a href="Virtualizacion.html">Virtualización</a></li>
+                            <li><a href="Linux_en_servidores.html">Linux en servidores</a></li>
+                            <li><a href="Conclusiones.html">Conclusiones</a></li>
+                            <li><a href="Fundamentales.html">Actividades Fundamentales</a></li>
+                        </ul>
+                    </nav>
+            
+                    <!-- Footer -->
+                    <footer id="footer">
+                        <p class="copyright">&copy; Equipo 2</p>
+                    </footer>
+                </div>
+            </div>
+            
 
         </div>
 
@@ -242,59 +287,6 @@
         <script src="assets/js/breakpoints.min.js"></script>
         <script src="assets/js/util.js"></script>
         <script src="assets/js/main.js"></script>
-
-        <script>
-            fetch('sidebar.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('sidebar-container').innerHTML = data;
-                // Reinitialize the sidebar behavior after injection
-                initializeSidebar();
-            });
-
-            // Function to initialize sidebar behavior
-            function initializeSidebar() {
-                var $sidebar = $('#sidebar'),
-                    $sidebar_inner = $sidebar.children('.inner');
-
-                // Inactive by default on <= large.
-                breakpoints.on('<=large', function() {
-                    $sidebar.addClass('inactive');
-                });
-
-                breakpoints.on('>large', function() {
-                    $sidebar.removeClass('inactive');
-                });
-
-                // Toggle sidebar
-                $('<a href="#sidebar" class="toggle">Toggle</a>')
-                    .appendTo($sidebar)
-                    .on('click', function(event) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                        $sidebar.toggleClass('inactive');
-                    });
-
-                // Event listeners for sidebar clicks
-                $sidebar.on('click', 'a', function(event) {
-                    if (breakpoints.active('>large')) return;
-                    event.preventDefault();
-                    event.stopPropagation();
-                    var $a = $(this), href = $a.attr('href'), target = $a.attr('target');
-                    if (!href || href == '#' || href == '') return;
-                    $sidebar.addClass('inactive');
-                    setTimeout(function() {
-                        if (target == '_blank') window.open(href);
-                        else window.location.href = href;
-                    }, 500);
-                });
-
-                $body.on('click touchend', function(event) {
-                    if (breakpoints.active('>large')) return;
-                    $sidebar.addClass('inactive');
-                });
-            }
-        </script>
 
     </body>
 </html>

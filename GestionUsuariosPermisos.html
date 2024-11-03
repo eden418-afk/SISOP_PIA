@@ -1,0 +1,266 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Gestión de Usua y Permisos</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+    </head>
+    <body class="is-preload">
+
+        <!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Main -->
+            <div id="main">
+                <div class="inner">
+
+                    <!-- Header -->
+                    <header id="header">
+                        <a href="index.html" class="logo"><strong>Hablemos de LINUX</strong> por Equipo 2</a>
+                        
+                    </header>
+
+                    <!-- Content -->
+                    <section>
+                        <header class="main">
+                            <h1>Gestión de Usuarios y Permisos</h1>
+                        </header>
+                        <span class="image main"><img src="images/UsuairosPermisos/UsuariosyPermisos.jpg" alt="UsuariosYPermisos" height="500" /></span>
+                        <p>
+                            El concepto de usuario en Linux permite separar entornos de ejecución para diferentes propósitos. Dos personas pueden trabajar simultáneamente en el mismo sistema, teniendo cada uno un usuario diferente, y un directorio personal diferente.
+                            <br><br>
+                            También es muy común que muchos servicios internos del sistema tengan su propio usuario para restringir el acceso de ese servicio como mecanismo de seguridad. De este modo, si un servicio ve su seguridad comprometida por un ataque, el acceso que tenga el usuario de ese servicio servirá como contención del ataque, y no podrá acceder a ficheros pertenecientes a otro usuario (de persona o servicio).
+                        </p>
+                    </section>
+
+                    <section>
+                        <header class="major">
+                            <h2 id="content">Comandos útiles de Linux para la gestión de usuarios</h2>
+                        </header>
+                        <p>
+                            Los comandos de administración de usuarios de Linux son sencillos y permiten a los administradores realizar operaciones básicas y avanzadas, como crear, modificar y eliminar cuentas y grupos de usuarios, y administrar propiedades de cuentas. Algunos comandos de Linux útiles que los administradores usan con regularidad son:
+                        </p>
+                        <div class="table-wrapper">
+                            <table>
+                                <thead style="text-align-last: center; vertical-align: center; font-size: 20px;">
+                                    <tr>
+                                        <th>Dominio</th>
+                                        <th>Descripción</th>
+                                    </tr>
+                                </thead>
+                                <tbody style="text-align-last: justify; vertical-align: center; font-size: 20px;">
+                                    <tr>
+                                        <td>usuarioadd</td>
+                                        <td><p>Cree nuevas cuentas de usuario de Linux, especificando varias opciones como nombre de usuario, directorio de inicio e ID de usuario.</p></td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td>password</td>
+                                        <td><p>Establecer o cambiar la contraseña de una cuenta de usuario.</p></td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td>usuariodel</td>
+                                        <td><p>Eliminar una cuenta de usuario, garantizando que el usuario ya no tenga acceso a los recursos del sistema.</p></td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td>grupoadd</td>
+                                        <td><p>Agregue un nuevo grupo en Linux y especifique las opciones del grupo.</p></td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td>grupodel</td>
+                                        <td><p>Eliminar un grupo existente y todos los archivos asociados a ese grupo.</p></td>
+                                    </tr>      
+                                    <tr>
+                                        <td>chown</td>
+                                        <td><p>Transferir la propiedad de un archivo o directorio a un usuario o grupo diferente.</p></td>
+                                    </tr>                              
+                                </tbody>                                
+                            </table>
+                        </div>
+                    </section>
+
+                    <section>
+                        <header class="major">
+                            <h2>Creación y gestión de cuentas de usuario</h2>
+                        </header>
+                        <p>Para crear una nueva cuenta de usuario en Linux:</p>
+                        <p>1. Abra la línea de comando y escriba el comando 
+                            <b style="color: darkorange;"><code>useradd [opciones] NOMBRE DE USUARIO</code></b>seguido del nombre de usuario.
+                            Este comando crea una nueva cuenta de usuario con configuraciones predeterminadas, como un directorio de inicio y un ID de usuario. También puede especificar diferentes opciones para personalizar estas configuraciones.
+                        </p>
+                        <p>
+                            2. Después de crear la cuenta, puede establecer o cambiar la contraseña escribiendo el comando <b style="color: darkorange;"><code>passwd [opciones] NOMBRE DE USUARIO</code></b>.
+                        </p>
+                        <p>
+                            3. Modifique varios atributos de una cuenta de usuario utilizando el comando <b style="color: darkorange;"><code>usermod [opciones] NOMBRE DE USUARIO</code></b>, incluido el cambio del nombre de usuario, el directorio de inicio, el ID de usuario o el ID de grupo.
+                        </p>
+                        <p>
+                            4. Para eliminar una cuenta de usuario, escriba el comando <b style="color: darkorange;"><code>userdel [opciones] NOMBRE DE USUARIO</code></b> seguido del nombre de usuario. Esto elimina la cuenta de usuario del sistema y garantiza que el usuario ya no tenga acceso a los recursos del sistema.
+                        </p>
+                        <p>
+                            5. Utilice el comando “chown” para cambiar la propiedad de un archivo o directorio y el comando <code>archivo chmod [opciones]</code> para modificar los permisos.
+                        </p>
+                    </section>
+
+                    <section>
+                        <header class="major">
+                            <h2>Configuración de permisos de usuario y control de acceso</h2>                            
+                        </header>
+                        <p>
+                            La configuración adecuada de los permisos de usuario y el control de acceso en Linux garantiza que los usuarios tengan acceso adecuado a los recursos del sistema manteniendo al mismo tiempo la seguridad e integridad del sistema.
+                        </p>
+                        <h3 style="font-size: 20px;">Permisos de los usuarios en Linux</h3>
+                        <p>
+                            En Linux, cada archivo y directorio está asociado con tres tipos de permisos: lectura, escritura y ejecución (designados por r, w y e).
+                            <br><br>
+                            La lectura permite al usuario leer el contenido del archivo, pero no cambiarlo. La escritura permite que el usuario modifique el archivo. La ejecución, como el nombre lo dice, permite que el usuario ejecute el archivo, en caso de ser ejecutable.
+                            <br><br>
+                            Pero sucede que los permisos no funcionan aisladamente, o sea, de forma que el usuario tenga permiso de lectura o de escritura o de ejecución. Los permisos funcionan en conjunto. Esto quiere decir que cada archivo/directorio tiene los tres permisos establecidos, corresponde al dueño determinar cuál de estos permisos está habilitado para los usuarios o no.
+                            <br><br>
+                            Puede ser que una determinada cantidad de usuarios tengan permiso para modificar un archivo, pero otros no, por ejemplo. De ahí la necesidad de usar grupos. En este caso, el permiso de escritura de este archivo será dada al grupo, por lo que todo usuario miembro puede cambiar el archivo. Ten en cuenta que es necesario tener cierto cuidado con los permisos. Por ejemplo, el que informa de que el usuario tenga permiso de escritura si no tiene permiso de lectura habilitada.
+                            <br><br>
+                            Ahora que ya sabemos el significado de las divisiones de la cadena, vamos a entender lo que las letras r, w, x, y el carácter – representan:
+                        </p>                        
+                        <ul>
+                            <li><b>r: </b>significa permiso de lectura (read).</li>
+                            <li><b>w: </b>significa permiso de escritura (write).</li>
+                            <li><b>x: </b>significa permiso de ejecución (execution).</li>
+                            <li><b>–: </b>significa permiso deshabilitado.</li>
+                        </ul>
+                        <div class="box alt">
+                            <div class="col-4"><span class="image fit"><img src="images/UsuairosPermisos/permisos.png" alt="" width="100px" height="250px" /></span></div>
+                        </div>
+                        <p>
+                            Estos permisos se pueden conceder o restringir para el propietario, el grupo y otros. De forma predeterminada, el propietario tiene permisos de lectura, escritura y ejecución, mientras que el grupo y otros solo tienen permisos de lectura y ejecución.
+                            <br><br>
+                            Para modificar los permisos, puede utilizar el comando chmod seguido de las opciones deseadas. Por ejemplo, para otorgar permisos de lectura y escritura al propietario, puede utilizar el comando: 
+                            <br><b style="color: darkorange;"><code>chmod u+rw archivo.txt </code></b>
+                            <br><br>
+                            Para eliminar los permisos de lectura y escritura del grupo, utilice el comando: <b style="color: darkorange;"><code>chmod g-rw archivo.txt</code></b>
+                            <br><br>
+                            Linux también admite listas de control de acceso (ACL), que brindan un control más detallado sobre el acceso de los usuarios. Las ACL permiten especificar permisos de acceso para usuarios individuales o grupos, anulando los permisos predeterminados.
+                            <br><br>
+                            Para configurar las ACL, puede utilizar el comando “setfacl” seguido de las opciones deseadas. Por ejemplo, para otorgar permisos de lectura y escritura a un usuario específico, puede utilizar el comando: 
+                            <br><b style="color: darkorange;"><code>setfacl -mu:nombre de usuario:rw archivo.txt</code></b>
+                            <br><br>
+                            Configurar cuidadosamente los permisos y el control de acceso garantiza que los usuarios tengan el nivel adecuado de acceso a los recursos del sistema y al mismo tiempo mantiene la seguridad de su sistema Linux.
+                        </p>
+                        <div class="table-wrapper">
+                            <table class="alt">
+                                <thead style="text-align-last: center; vertical-align: center; font-size: 20px;">
+                                    <tr>
+                                        <th>Permisos</th>
+                                        <th>Valor</th>
+                                        <th>Descripción</th>
+                                    </tr>
+                                </thead>
+                                <tbody style="text-align-last:left; vertical-align: center; font-size: 20px;">
+                                    <tr>
+                                        <td>rw-------</td>
+                                        <td>600</td>
+                                        <td><p>El propietario tiene permisos de lectura y escritura.</p></td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td>rwx--x--x</td>
+                                        <td>711</td>
+                                        <td><p>El propietario tiene permisos de lectura, escritura y ejecución, el grupo y otros solo ejecución</p></td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td>rwxr-xr-x</td>
+                                        <td>755</td>
+                                        <td><p>El propietario tiene permisos de lectura, escritura y ejecución, el grupo y otros pueden leer y ejecutar el archivo.</p></td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td>rwxrwxrwx</td>
+                                        <td>777</td>
+                                        <td><p>El archivo puede ser leído, escrito y ejecutado por quien sea</p></td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td>r--------</td>
+                                        <td>400</td>
+                                        <td><p>Solo el propietario puede leer el archivo, pero ni el mismo puede modificarlo o ejecutarlo y ni el grupo ni otros pueden hacer nada en el.</p></td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td>rw-r-----</td>
+                                        <td>640</td>
+                                        <td><p>El usuario propietario puede leer y escribir, el grupo puede leer el archivo y otros no pueden hacer nada.</p></td>
+                                    </tr>                                    
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </section>
+
+                    <section>
+                        <header class="major">
+                            <h2>Referencias Bibliográficas</h2>
+                        </header>
+                        <ul>
+                            <li>Sistemas Operativos GNU/Linux. (2023). Administración de usuarios y grupos en Linux. Sistemas Operativos GNU/Linux. Recuperado de https://www.sistemasoperativosgnulinux.com/administracion-de-usuarios-y-grupos-en-linux</li>
+                            <li>Martínez, S. (2021). Cómo administrar usuarios y grupos en Linux. Linux Adictos. Recuperado de https://www.linuxadictos.com/como-administrar-usuarios-y-grupos-en-linux.html </li>
+                            <li>Parzibyte, (2022). Cómo crear y eliminar usuarios y grupos en Linux. Parzibyte’s Blog. Recuperado de https://parzibyte.me/blog/2022/01/14/crear-eliminar-usuarios-grupos-linux/</li>
+                        </ul>
+                    </section>
+
+                </div>
+            </div>
+
+
+            <!--Sidebar-->
+            <div id="sidebar">
+                <div class="inner">
+                    
+                    <!-- Menú -->
+                    <nav id="menu">
+                        <header class="major">
+                            <h2>Menú</h2>
+                        </header>
+                        <ul>
+                            <li><a href="index.html">Homepage</a></li>
+                            <li><a href="HistoriaDeLinux.html">Historia</a></li>
+                            <li><a href="distribuciones.html">Distribuciones</a></li>
+                            <li><a href="arquitectura.html">Arquitectura</a></li>
+                            <li>
+                                <span class="opener">Comandos en LINUX</span>
+                                <ul>
+                                    <li><a href="ComandosBasicosDeNavegacion.html">Navegación</a></li>
+                                    <li><a href="ComandosGestionArchivos.html">Gestión de archivos</a></li>
+                                    <li><a href="ComandosVisualizacionArchivos.html">Visualización de archivos</a></li>
+                                    <li><a href="ComandosCompresionEmpaquetado.html">Compresión y empaquetado</a></li>
+                                    <li><a href="ComandosGestionUsuariosPermisos.html">Gestión de usuarios y permisos</a></li>
+                                    <li><a href="ComandosRedConexion.html">Red y conexión</a></li>
+                                    <li><a href="ComandosProcesosSistema.html">Procesos y sistema</a></li>
+                                    <li><a href="ComandosInstalacionSoftware.html">Instalación de software</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="GestionUsuariosPermisos.html">Gestión de usuarios y permisos</a></li>
+                            <li><a href="sistema_de_archivos.html">Sistemas de Archivos</a></li>
+                            <li><a href="gestion_procesos.html">Gestión de Procesos</a></li>
+                            <li><a href="Seguridad_en_linux.html">Seguridad en Linux</a></li>
+                            <li><a href="Instalacion_de_software_en_linux.html">Instalación de software</a></li>
+                            <li><a href="EntornosGraficos.html">Entornos Gráficos</a></li>                
+                            <li><a href="Virtualizacion.html">Virtualización</a></li>
+                            <li><a href="Linux_en_servidores.html">Linux en servidores</a></li>
+                            <li><a href="Conclusiones.html">Conclusiones</a></li>
+                            <li><a href="Fundamentales.html">Actividades Fundamentales</a></li>
+                        </ul>
+                    </nav>
+            
+                    <!-- Footer -->
+                    <footer id="footer">
+                        <p class="copyright">&copy; Equipo 2</p>
+                    </footer>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </body>
+</html>
