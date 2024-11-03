@@ -2297,3 +2297,25 @@ td{
 p{
   font-size: 20px;
 }
+ul,ol{
+  font-size: 20px;
+}
+pre{
+  font-size: 20px;
+}
+.pdf-wrapper {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 10; /* Asegura que esté encima del contenido */
+}
+.pdf-container {
+  width: 80%;
+  height: 80vh; 
+  max-width: 800px; 
+  border: 2px solid #333; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
