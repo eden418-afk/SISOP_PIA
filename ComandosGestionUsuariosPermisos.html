@@ -35,7 +35,8 @@
 
 								<span class="image main"><img src="images/linux.jpg" alt="" /></span>
 
-								<p>Los comandos de LINUX permiten al usuario controlar el sistema desde la interfaz de linea de comandos (CLI) en lugar de utilizar una interfaz con iconos. Estos son instrucciones de texto introducidas en la terminar para indicarle al sistema operativo exactamente qu es lo que se tiene que hacer. Los comandos que se ingresan en la terminal de LINUX se distinguen entre mayúsculas y minúsculas, ademas de seguir una sintaxis.</p>
+								<p>Los comandos de LINUX permiten al usuario controlar el sistema desde la interfaz de línea de comandos (CLI) en lugar de utilizar una interfaz con iconos. Estos son instrucciones de texto introducidas en la terminar para indicarle al sistema operativo exactamente que es lo que se tiene que hacer. Los comandos que se ingresan en la terminal de LINUX se distinguen entre mayúsculas y minúsculas, además de seguir una sintaxis.</p>
+								<p>Los comandos de gestión de usuarios y permisos permiten controlar quién tiene acceso a archivos y qué operaciones pueden realizar. Esta categoría es clave para la seguridad del sistema, ya que ayuda a definir y ajustar los permisos de lectura, escritura y ejecución, y a gestionar los usuarios y grupos.</p>
 								
 								<hr class="major" />
 
@@ -43,6 +44,13 @@
 								<p>Este comando ejecuta comandos con privilegios de superusuario.</p>
 								<h3>Sintaxis</h3>
 								<p>sudo [comando]</p>
+								<p>Opciones comunes:</p>
+								<ul>
+									<li><b>-l: </b>lista los comandos permitidos o prohibidos para el usuario actual.</li>
+									<li><b>-v: </b>actualiza el tiempo de autenticación, extendiendo el tiempo sin pedir la contraseña.</li>
+									<li><b>-k: </b>invalida la autenticación, forzando a pedir la contraseña la próxima vez.</li>
+									<li><b>-u [usuario]: </b>ejecuta el comando como otro usuario, no como root.</li>
+								</ul>
 								<h3>Ejemplo</h3>
 								<pre><code>sudo apt-get update — Ejecuta apt-get update con privilegios de superusuario.</code></pre>
 
@@ -84,57 +92,65 @@
 																	
 							</section>
 
+							<section>
+								<header class="major">
+									<h2>Referencias Bibliográficas</h2>
+								</header>
+								<ul>
+									<li>Stamp, M. (2024, July 22). <em>Top 100 comandos Linux que debes conocer. </em>Guías Para Sitios Web, Tips & Conocimiento. <a href="https://www.dreamhost.com/blog/es/comandos-linux-que-debes-conocer/">https://www.dreamhost.com/blog/es/comandos-linux-que-debes-conocer/</a></li>
+								</ul>
+							</section>
+
 						</div>
 					</div>
 
 				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
-
-							<!-- Search -->
-								<section id="search" class="alt">
-									<form method="post" action="#">
-										<input type="text" name="query" id="query" placeholder="Search" />
-									</form>
-								</section>
-
-							<!-- Menu -->
-							<nav id="menu">
-								<header class="major">
-									<h2>Menu</h2>
-								</header>
-								<ul>
-									<li><a href="index.html">Homepage</a></li>
-									<li><a href="HistoriaDeLinux.html">Historia</a></li>
-									<li><a href="distribuciones.html">Distribuciones</a></li>
-									<li><a href="arquitectura.html">Arquitectura</a></li>
-									<li><a href="sistema_de_archivos.html">Sistemas de Archivos</a></li>
-									<li><a href="gestion_procesos.html">Gestión de Procesos</a></li>
-									<li>
-										<span class="opener">Comandos en LINUX</span>
-										<ul>
-											<li><a href="ComandosBasicosDeNavegacion.html">Navegacion</a></li>
-											<li><a href="ComandosGestionArchivos.html">Gestión de archivos</a></li>
-											<li><a href="ComandosVisualizacionArchivos.html">Visualización de archivos</a></li>
-											<li><a href="ComandosCompresionEmpaquetado.html">Compresión y empaquetado</a></li>
-											<li><a href="ComandosGestionUsuariosPermisos.html">Gestión de usuarios y permisos</a></li>
-											<li><a href="ComandosRedConexion.html">Red y conexión</a></li>
-											<li><a href="ComandosProcesosSistema.html">Procesos y sistema</a></li>
-											<li><a href="ComandosInstalacionSoftware.html">Instalación de software</a></li>
-										</ul>
-									</li>
-									<li><a href="Virtualizacion.html"></a></li>
-									<li><a href="EntornosGraficos.html">Entornos Gráficos</a></li>
-								</ul>
-							</nav>
-
-							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">&copy; Equipo 2.</p>
-								</footer>
-
-						</div>
+				<div id="sidebar">
+					<div class="inner">
+						
+						<!-- Menú -->
+						<nav id="menu">
+							<header class="major">
+								<h2>Menú</h2>
+							</header>
+							<ul>
+								<li><a href="index.html">Homepage</a></li>
+								<li><a href="HistoriaDeLinux.html">Historia</a></li>
+								<li><a href="distribuciones.html">Distribuciones</a></li>
+								<li><a href="arquitectura.html">Arquitectura</a></li>
+								<li>
+									<span class="opener">Comandos en LINUX</span>
+									<ul>
+										<li><a href="ComandosBasicosDeNavegacion.html">Navegación</a></li>
+										<li><a href="ComandosGestionArchivos.html">Gestión de archivos</a></li>
+										<li><a href="ComandosVisualizacionArchivos.html">Visualización de archivos</a></li>
+										<li><a href="ComandosCompresionEmpaquetado.html">Compresión y empaquetado</a></li>
+										<li><a href="ComandosGestionUsuariosPermisos.html">Gestión de usuarios y permisos</a></li>
+										<li><a href="ComandosRedConexion.html">Red y conexión</a></li>
+										<li><a href="ComandosProcesosSistema.html">Procesos y sistema</a></li>
+										<li><a href="ComandosInstalacionSoftware.html">Instalación de software</a></li>
+									</ul>
+								</li>
+								<li><a href="GestionUsuariosPermisos.html">Gestión de usuarios y permisos</a></li>
+								<li><a href="sistema_de_archivos.html">Sistemas de Archivos</a></li>
+								<li><a href="gestion_procesos.html">Gestión de Procesos</a></li>
+								<li><a href="Seguridad_en_linux.html">Seguridad en Linux</a></li>
+								<li><a href="Instalacion_de_software_en_linux.html">Instalación de software</a></li>
+								<li><a href="EntornosGraficos.html">Entornos Gráficos</a></li>                
+								<li><a href="Virtualizacion.html">Virtualización</a></li>
+								<li><a href="Linux_en_servidores.html">Linux en servidores</a></li>
+								<li><a href="Conclusiones.html">Conclusiones</a></li>
+								<li><a href="Fundamentales.html">Actividades Fundamentales</a></li>
+							</ul>
+						</nav>
+				
+						<!-- Footer -->
+						<footer id="footer">
+							<p class="copyright">&copy; Equipo 2</p>
+						</footer>
 					</div>
+				</div>
+				
 
 			</div>
 

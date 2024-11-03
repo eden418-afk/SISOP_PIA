@@ -35,14 +35,21 @@
 
 									<span class="image main"><img src="images/linux.jpg" alt="" /></span>
 
-									<p>Los comandos de LINUX permiten al usuario controlar el sistema desde la interfaz de linea de comandos (CLI) en lugar de utilizar una interfaz con iconos. Estos son instrucciones de texto introducidas en la terminar para indicarle al sistema operativo exactamente qu es lo que se tiene que hacer. Los comandos que se ingresan en la terminal de LINUX se distinguen entre mayúsculas y minúsculas, ademas de seguir una sintaxis.</p>
-									
+									<p>Los comandos de LINUX permiten al usuario controlar el sistema desde la interfaz de línea de comandos (CLI) en lugar de utilizar una interfaz con iconos. Estos son instrucciones de texto introducidas en la terminar para indicarle al sistema operativo exactamente que es lo que se tiene que hacer. Los comandos que se ingresan en la terminal de LINUX se distinguen entre mayúsculas y minúsculas, además de seguir una sintaxis.</p>
+									<p>Estos comandos son esenciales para manipular archivos y directorios. Permiten copiar, mover, renombrar y eliminar archivos, lo cual es fundamental para organizar y gestionar los datos en el sistema de archivos de Linux.</p>
 									<hr class="major" />
 
 									<h2>cp</h2>
 									<p>Este comando copia archivos o directorios. Requiere pasar una ruta de origen y una de destino</p>
 									<h3>Sintaxis</h3>
 									<p>cp /origen/ /destino/</p>
+									<p>Opciones comunes</p>
+									<ul>
+										<li><b>-r:</b> copia directorios de forma recursiva.</li>
+										<li><b>-u:</b> solo copia archivos si el destino no existe o si el archivo origen es más reciente.</li>
+										<li><b>-v:</b> muestra los archivos a medida que se copian (modo detallado).</li>
+										<li><b>-i:</b> pide confirmación antes de sobrescribir archivos existentes.</li>
+									</ul>
 									<h3>Ejemplo</h3>
 									<pre><code>cp /home/user/documents /backups/</code></pre>
 
@@ -52,6 +59,12 @@
 									<p>Este comando mueve o renombra archivos y directorios. Los archivos de la ruta origen se eliminan despues de haber sido movidos al destino</p>
 									<h3>Sintaxis</h3>
 									<p>mv /origen/ /destino/</p>
+									<p>Opciones comunes</p>
+									<ul>
+										<li><b>-i:</b> solicita confirmación antes de sobrescribir archivos.</li>
+										<li><b>-u:</b> solo mueve el archivo si el origen es más nuevo que el destino o si el destino no existe.</li>
+										<li><b>-v:</b> muestra los archivos a medida que se mueven.</li>
+									</ul>
 									<h3>Ejemplo</h3>
 									<pre><code>mv archivo.txt documentos/ --Mueve el archivo.txt al directorio documentos/</code></pre>
 
@@ -61,6 +74,12 @@
 									<p>Este comando elimina archivos o directorios. Una vez eliminados los archivos y directorios estos no se pueden recuperar.</p>
 									<h3>Sintaxis</h3>
 									<p>rm [opciones] [archivo]</p>
+									<p>Opciones comunes:</p>
+									<ul>
+										<li><b>-r: </b>elimina archivos y directorios de manera recursiva.</li>
+										<li><b>-f: </b>fuerza la eliminación sin solicitar confirmación.</li>
+										<li><b> -i: </b>pide confirmación antes de eliminar cada archivo.</li>
+									</ul>
 									<h3>Ejemplo</h3>
 									<pre><code>rm archivo.txt --Elimina el archivo archivo.txt</code></pre>
 
@@ -79,63 +98,75 @@
 									<p>Este comando cambia los permisos de archivos y directorios.</p>
 									<h3>Sintaxis</h3>
 									<p>chmod [permisos] [archivo]</p>
+									<p>Opciones comunes:</p>
+									<ul>
+										<li><b>-R: cambia los permisos de archivos y subdirectorios de forma recursiva.</b></li>
+									</ul>
 									<h3>Ejemplo</h3>
-									<pre><code>chmod 755 script.sh --Cambia los permisos de script.sh para que el usuario tenga permisos 
-			de lectura, escritura y ejecución, y el grupo y otros solo lectura y ejecución.</code></pre>
+									<pre style="font-size: 20px;"><code>chmod 755 script.sh --Cambia los permisos de script.sh para que el usuario tenga permisos 
+de lectura, escritura y ejecución, y el grupo y otros solo lectura y ejecución.</code></pre>
 									
+								</section>
+
+								<section>
+									<header class="major">
+										<h2>Referencias Bibliográficas</h2>
+									</header>
+									<ul>
+										<li>Stamp, M. (2024, July 22). <em>Top 100 comandos Linux que debes conocer. </em>Guías Para Sitios Web, Tips & Conocimiento. <a href="https://www.dreamhost.com/blog/es/comandos-linux-que-debes-conocer/">https://www.dreamhost.com/blog/es/comandos-linux-que-debes-conocer/</a></li>
+									</ul>
 								</section>
 
 						</div>
 					</div>
 
 				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
-
-							<!-- Search -->
-								<section id="search" class="alt">
-									<form method="post" action="#">
-										<input type="text" name="query" id="query" placeholder="Search" />
-									</form>
-								</section>
-
-							<!-- Menu -->
-							<nav id="menu">
-								<header class="major">
-									<h2>Menu</h2>
-								</header>
-								<ul>
-									<li><a href="index.html">Homepage</a></li>
-									<li><a href="HistoriaDeLinux.html">Historia</a></li>
-									<li><a href="distribuciones.html">Distribuciones</a></li>
-									<li><a href="arquitectura.html">Arquitectura</a></li>
-									<li><a href="sistema_de_archivos.html">Sistemas de Archivos</a></li>
-									<li><a href="gestion_procesos.html">Gestión de Procesos</a></li>
-									<li>
-										<span class="opener">Comandos en LINUX</span>
-										<ul>
-											<li><a href="ComandosBasicosDeNavegacion.html">Navegacion</a></li>
-											<li><a href="ComandosGestionArchivos.html">Gestión de archivos</a></li>
-											<li><a href="ComandosVisualizacionArchivos.html">Visualización de archivos</a></li>
-											<li><a href="ComandosCompresionEmpaquetado.html">Compresión y empaquetado</a></li>
-											<li><a href="ComandosGestionUsuariosPermisos.html">Gestión de usuarios y permisos</a></li>
-											<li><a href="ComandosRedConexion.html">Red y conexión</a></li>
-											<li><a href="ComandosProcesosSistema.html">Procesos y sistema</a></li>
-											<li><a href="ComandosInstalacionSoftware.html">Instalación de software</a></li>
-										</ul>
-									</li>
-									<li><a href="Virtualizacion.html"></a></li>
-									<li><a href="EntornosGraficos.html">Entornos Gráficos</a></li>
-								</ul>
-							</nav>
-
-							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">&copy; Equipo 2.</p>
-								</footer>
-
-						</div>
+				<div id="sidebar">
+					<div class="inner">
+						
+						<!-- Menú -->
+						<nav id="menu">
+							<header class="major">
+								<h2>Menú</h2>
+							</header>
+							<ul>
+								<li><a href="index.html">Homepage</a></li>
+								<li><a href="HistoriaDeLinux.html">Historia</a></li>
+								<li><a href="distribuciones.html">Distribuciones</a></li>
+								<li><a href="arquitectura.html">Arquitectura</a></li>
+								<li>
+									<span class="opener">Comandos en LINUX</span>
+									<ul>
+										<li><a href="ComandosBasicosDeNavegacion.html">Navegación</a></li>
+										<li><a href="ComandosGestionArchivos.html">Gestión de archivos</a></li>
+										<li><a href="ComandosVisualizacionArchivos.html">Visualización de archivos</a></li>
+										<li><a href="ComandosCompresionEmpaquetado.html">Compresión y empaquetado</a></li>
+										<li><a href="ComandosGestionUsuariosPermisos.html">Gestión de usuarios y permisos</a></li>
+										<li><a href="ComandosRedConexion.html">Red y conexión</a></li>
+										<li><a href="ComandosProcesosSistema.html">Procesos y sistema</a></li>
+										<li><a href="ComandosInstalacionSoftware.html">Instalación de software</a></li>
+									</ul>
+								</li>
+								<li><a href="GestionUsuariosPermisos.html">Gestión de usuarios y permisos</a></li>
+								<li><a href="sistema_de_archivos.html">Sistemas de Archivos</a></li>
+								<li><a href="gestion_procesos.html">Gestión de Procesos</a></li>
+								<li><a href="Seguridad_en_linux.html">Seguridad en Linux</a></li>
+								<li><a href="Instalacion_de_software_en_linux.html">Instalación de software</a></li>
+								<li><a href="EntornosGraficos.html">Entornos Gráficos</a></li>                
+								<li><a href="Virtualizacion.html">Virtualización</a></li>
+								<li><a href="Linux_en_servidores.html">Linux en servidores</a></li>
+								<li><a href="Conclusiones.html">Conclusiones</a></li>
+								<li><a href="Fundamentales.html">Actividades Fundamentales</a></li>
+							</ul>
+						</nav>
+				
+						<!-- Footer -->
+						<footer id="footer">
+							<p class="copyright">&copy; Equipo 2</p>
+						</footer>
 					</div>
+				</div>
+				
 
 			</div>
 

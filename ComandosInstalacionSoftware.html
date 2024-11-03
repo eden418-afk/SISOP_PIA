@@ -35,14 +35,22 @@
 
 								<span class="image main"><img src="images/linux.jpg" alt="" /></span>
 
-								Los comandos de LINUX permiten al usuario controlar el sistema desde la interfaz de linea de comandos (CLI) en lugar de utilizar una interfaz con iconos. Estos son instrucciones de texto introducidas en la terminar para indicarle al sistema operativo exactamente qu es lo que se tiene que hacer. Los comandos que se ingresan en la terminal de LINUX se distinguen entre mayúsculas y minúsculas, ademas de seguir una sintaxis.
-								
+								<p>Los comandos de LINUX permiten al usuario controlar el sistema desde la interfaz de línea de comandos (CLI) en lugar de utilizar una interfaz con iconos. Estos son instrucciones de texto introducidas en la terminar para indicarle al sistema operativo exactamente que es lo que se tiene que hacer. Los comandos que se ingresan en la terminal de LINUX se distinguen entre mayúsculas y minúsculas, además de seguir una sintaxis.</p>
+								<p>La categoría de instalación de software agrupa comandos que permiten instalar, actualizar y eliminar aplicaciones y paquetes en el sistema. Es crucial para mantener el sistema actualizado, añadir nuevas funcionalidades y gestionar el software de manera eficiente.</p>
 								<hr class="major" />
 
 								<h2>apt-get</h2>
 								<p>Instala, actualiza o elimina paquetes en sistemas basados en Debian.</p>
 								<h3>Sintaxis</h3>
 								<p>apt-get [opciones] [paquete]</p>
+								<p>Opciones comunes:</p>
+								<ul>
+									<li><b>update: </b>actualiza la lista de paquetes disponibles.</li>
+									<li><b>upgrade: </b>actualiza todos los paquetes instalados a las versiones más recientes disponibles.</li>
+									<li><b>install [paquete]: </b>instala un paquete.</li>
+									<li><b>remove [paquete]: </b>elimina un paquete instalado.</li>
+									<li><b>autoremove:</b>elimina automáticamente los paquetes que ya no son necesarios.</li>
+								</ul>
 								<h3>Ejemplo</h3>
 								<pre><code>sudo apt-get install vim — Instala el editor vim.</code></pre>
 
@@ -52,6 +60,13 @@
 								<p>Instala, actualiza o elimina paquetes en sistemas basados en Red Hat.</p>
 								<h3>Sintaxis</h3>
 								<p>yum [opciones] [paquete]</p>
+								<p>Opciones comunes:</p>
+								<ul>
+									<li><b>install [paquete]: </b>instala un paquete.</li>
+									<li><b>update: </b>actualiza los paquetes instalados en el sistema.</li>
+									<li><b>remove [paquete]: </b>elimina un paquete del sistema.</li>
+									<li><b>list: </b>lista los paquetes instalados o disponibles.</li>
+								</ul>
 								<h3>Ejemplo</h3>
 								<pre><code>sudo yum install httpd — Instala el servidor web Apache en sistemas basados en Red Hat.</code></pre>
 
@@ -75,57 +90,65 @@
 								
 							</section>
 
+							<section>
+								<header class="major">
+									<h2>Referencias Bibliográficas</h2>
+								</header>
+								<ul>
+									<li>Stamp, M. (2024, July 22). <em>Top 100 comandos Linux que debes conocer. </em>Guías Para Sitios Web, Tips & Conocimiento. <a href="https://www.dreamhost.com/blog/es/comandos-linux-que-debes-conocer/">https://www.dreamhost.com/blog/es/comandos-linux-que-debes-conocer/</a></li>
+								</ul>
+							</section>
+
 						</div>
 					</div>
 
 				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
-
-							<!-- Search -->
-								<section id="search" class="alt">
-									<form method="post" action="#">
-										<input type="text" name="query" id="query" placeholder="Search" />
-									</form>
-								</section>
-
-							<!-- Menu -->
-							<nav id="menu">
-								<header class="major">
-									<h2>Menu</h2>
-								</header>
-								<ul>
-									<li><a href="index.html">Homepage</a></li>
-									<li><a href="HistoriaDeLinux.html">Historia</a></li>
-									<li><a href="distribuciones.html">Distribuciones</a></li>
-									<li><a href="arquitectura.html">Arquitectura</a></li>
-									<li><a href="sistema_de_archivos.html">Sistemas de Archivos</a></li>
-									<li><a href="gestion_procesos.html">Gestión de Procesos</a></li>
-									<li>
-										<span class="opener">Comandos en LINUX</span>
-										<ul>
-											<li><a href="ComandosBasicosDeNavegacion.html">Navegacion</a></li>
-											<li><a href="ComandosGestionArchivos.html">Gestión de archivos</a></li>
-											<li><a href="ComandosVisualizacionArchivos.html">Visualización de archivos</a></li>
-											<li><a href="ComandosCompresionEmpaquetado.html">Compresión y empaquetado</a></li>
-											<li><a href="ComandosGestionUsuariosPermisos.html">Gestión de usuarios y permisos</a></li>
-											<li><a href="ComandosRedConexion.html">Red y conexión</a></li>
-											<li><a href="ComandosProcesosSistema.html">Procesos y sistema</a></li>
-											<li><a href="ComandosInstalacionSoftware.html">Instalación de software</a></li>
-										</ul>
-									</li>
-									<li><a href="Virtualizacion.html"></a></li>
-									<li><a href="EntornosGraficos.html">Entornos Gráficos</a></li>
-								</ul>
-							</nav>
-
-							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">&copy; Equipo 2.</p>
-								</footer>
-
-						</div>
+				<div id="sidebar">
+					<div class="inner">
+						
+						<!-- Menú -->
+						<nav id="menu">
+							<header class="major">
+								<h2>Menú</h2>
+							</header>
+							<ul>
+								<li><a href="index.html">Homepage</a></li>
+								<li><a href="HistoriaDeLinux.html">Historia</a></li>
+								<li><a href="distribuciones.html">Distribuciones</a></li>
+								<li><a href="arquitectura.html">Arquitectura</a></li>
+								<li>
+									<span class="opener">Comandos en LINUX</span>
+									<ul>
+										<li><a href="ComandosBasicosDeNavegacion.html">Navegación</a></li>
+										<li><a href="ComandosGestionArchivos.html">Gestión de archivos</a></li>
+										<li><a href="ComandosVisualizacionArchivos.html">Visualización de archivos</a></li>
+										<li><a href="ComandosCompresionEmpaquetado.html">Compresión y empaquetado</a></li>
+										<li><a href="ComandosGestionUsuariosPermisos.html">Gestión de usuarios y permisos</a></li>
+										<li><a href="ComandosRedConexion.html">Red y conexión</a></li>
+										<li><a href="ComandosProcesosSistema.html">Procesos y sistema</a></li>
+										<li><a href="ComandosInstalacionSoftware.html">Instalación de software</a></li>
+									</ul>
+								</li>
+								<li><a href="GestionUsuariosPermisos.html">Gestión de usuarios y permisos</a></li>
+								<li><a href="sistema_de_archivos.html">Sistemas de Archivos</a></li>
+								<li><a href="gestion_procesos.html">Gestión de Procesos</a></li>
+								<li><a href="Seguridad_en_linux.html">Seguridad en Linux</a></li>
+								<li><a href="Instalacion_de_software_en_linux.html">Instalación de software</a></li>
+								<li><a href="EntornosGraficos.html">Entornos Gráficos</a></li>                
+								<li><a href="Virtualizacion.html">Virtualización</a></li>
+								<li><a href="Linux_en_servidores.html">Linux en servidores</a></li>
+								<li><a href="Conclusiones.html">Conclusiones</a></li>
+								<li><a href="Fundamentales.html">Actividades Fundamentales</a></li>
+							</ul>
+						</nav>
+				
+						<!-- Footer -->
+						<footer id="footer">
+							<p class="copyright">&copy; Equipo 2</p>
+						</footer>
 					</div>
+				</div>
+				
 
 			</div>
 
