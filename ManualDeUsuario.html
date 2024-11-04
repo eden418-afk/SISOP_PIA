@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Comandos básicos de visualización de archivos</title>
+		<title>ManualDeUsuario</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -18,75 +18,37 @@
 							<!-- Header -->
 								<header id="header">
 									<a href="index.html" class="logo"><strong>Hablemos de LINUX</strong> por Equipo 2</a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									</ul>
 								</header>
 
 							<!-- Content -->
-								<section>
-									<header class="main">
-										<h1>Comandos De Visualización De Archivos</h1>
-									</header>
-
-									<span class="image main"><img src="images/linux.jpg" alt="" /></span>
-
-									<p>Los comandos de LINUX permiten al usuario controlar el sistema desde la interfaz de línea de comandos (CLI) en lugar de utilizar una interfaz con iconos. Estos son instrucciones de texto introducidas en la terminar para indicarle al sistema operativo exactamente que es lo que se tiene que hacer. Los comandos que se ingresan en la terminal de LINUX se distinguen entre mayúsculas y minúsculas, además de seguir una sintaxis.</p>
-									<p>Los comandos de esta categoría permiten ver el contenido de archivos en la terminal. Son útiles para leer archivos de texto, revisar configuraciones o analizar logs, proporcionando diversas maneras de inspeccionar la información sin necesidad de abrir aplicaciones adicionales.</p>
-
-									<hr class="major" />
-
-									<h2>cat</h2>
-									<p>Muestra el contenido de un archivo</p>
-									<h3>Sintaxis</h3>
-									<p>cat [archivo]</p>
-									<h3>Ejemplo</h3>
-									<pre><code>cat archivo.txt — Muestra el contenido de archivo.txt.</code></pre>
-
-									<hr class="major" />
-
-									<h2>more</h2>
-									<p>Muestra el contenido de un archivo página por página.</p>
-									<h3>Sintaxis</h3>
-									<p>more [archivo]</p>
-									<h3>Ejemplo</h3>
-									<pre><code>more archivo.txt — Muestra el contenido de archivo.txt una página a la vez.</code></pre>
-
-									<hr class="major" />
-
-									<h2>less</h2>
-									<p>Similar a more, pero con más opciones de navegación.</p>
-									<h3>Sintaxis</h3>
-									<p>less [archivo]</p>
-									<h3>Ejemplo</h3>
-									<pre><code>less archivo.txt — Similar a more, pero con más opciones de navegación.</code></pre>
-
-									<hr class="major" />
-
-									<h2>head</h2>
-									<p>Muestra las primeras líneas de un archivo.</p>
-									<h3>Sintaxis</h3>
-									<p>head [opciones] [archivo]</p>
-									<h3>Ejemplo</h3>
-									<pre><code>head -n 5 archivo.txt — Muestra las primeras 5 líneas de archivo.txt.</code></pre>
-
-									<hr class="major" />
-
-									<h2>tail</h2>
-									<p>Muestra las últimas líneas de un archivo.</p>
-									<h3>Sintaxis</h3>
-									<p>tail [opciones] [archivo]</p>
-									<h3>Ejemplo</h3>
-									<pre><code>tail -n 5 archivo.txt — Muestra las últimas 5 líneas de archivo.txt.</code></pre>
-									
-								</section>
-
-								<section>
-									<header class="major">
-										<h2>Referencias Bibliográficas</h2>
-									</header>
-									<ul>
-										<li>Stamp, M. (2024, July 22). <em>Top 100 comandos Linux que debes conocer. </em>Guías Para Sitios Web, Tips & Conocimiento. <a href="https://www.dreamhost.com/blog/es/comandos-linux-que-debes-conocer/">https://www.dreamhost.com/blog/es/comandos-linux-que-debes-conocer/</a></li>
-									</ul>
-								</section>
-
+							<section>
+								<header class="main">
+									<h1>Manual De Usuario</h1>                                         
+								</header>                                                                                                     
+							</section>
+							
+							<section>
+								<p>
+									A continuación se presenta un manual de usuario acerca de la pagina web.
+								</p>
+								<button id="openPdfBtn">Ver PDF</button>
+								<button id="closePdfBtn" style="margin-left: 10px;" disabled>Cerrar PDF</button>
+								<a href="fundamentales/ManualDeUsuario.pdf" download class="button icon solid fa-download" style="margin-left: 10px;">Descargar</a>
+							
+								<div class="pdf-wrapper" id="pdfWrapper" style="display: none;"> 
+									<div class="pdf-container">
+										<embed src="fundamentales/ManualDeUsuario.pdf" type="application/pdf" width="100%" height="100%">
+									</div>
+								</div>          
+							</section>
+															
 						</div>
 					</div>
 
@@ -147,6 +109,20 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>
+				document.getElementById("openPdfBtn").onclick = function() {
+					document.getElementById("pdfWrapper").style.display = "flex";
+					this.disabled = true;
+					document.getElementById("closePdfBtn").disabled = false;
+				};
+				
+				document.getElementById("closePdfBtn").onclick = function() {
+					document.getElementById("pdfWrapper").style.display = "none";
+					this.disabled = true;
+					document.getElementById("openPdfBtn").disabled = false;
+				};
+			</script>
 
 	</body>
 </html>
