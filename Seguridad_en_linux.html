@@ -112,11 +112,11 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><img src="images/comando1.png" style=" filter: brightness(1.8);transform: scale(1.1);"></td>
+                                            <td><img src="images/comando1.png" style="border-radius: 30px; filter: brightness(1.8);transform: scale(1.1);"></td>
                                             <td>Si queremos comprobar las particiones que tenemos creadas, ponemos el comando lsblk--fs</td>
                                         </tr>												
                                         <tr>
-                                            <td><img src="images/comando2.jpg.png" style=" filter: brightness(1.8);transform: scale(1.1);"></td>
+                                            <td><img src="images/comando2.jpg.png" style="border-radius: 30px; filter: brightness(1.8);transform: scale(1.1);"></td>
                                             <td>Si queremos ver las características de LUKS (algoritmo de cifrado simétrico usado, longitud de clave ,etc), ponemos el siguiente comando: cryptsetup luksDump /dev/sda5</td>
                                         </tr>																
                                         															
@@ -128,67 +128,67 @@
                             <ol>
                                 <li>
                                     <p>Lo primero que tenemos que hacer es crear una nueva partición en el disco, para posteriormente utilizarla, ejecutamos el siguiente comando: </p>
-                                    <img src="images/comando3.png"style="margin-bottom:30px; margin-left:300px ;filter: brightness(1.8);contrast(1.1); transform: scale(1.4);">
+                                    <img src="images/comando3.png"style="border-radius: 30px; margin-bottom:30px; margin-left:300px ;filter: brightness(1.8);contrast(1.1); transform: scale(1.4);">
                                 </li>
                                 <li>
                                     <p>
                                         Y continuamos poniendo «n» para crear una nueva partición, ponemos «p» para hacerla primaria, y aceptamos los valores que nos indican para tener una partición de todo el disco duro, si queremos hacerla más pequeña, tendremos que modificar los sectores para esta partición en concreto.
                                     </p>
-                                    <img src="images/comando4.png"style="margin-bottom:30px; margin-left:300px ;">
+                                    <img src="images/comando4.png"style="border-radius: 30px; margin-bottom:30px; margin-left:300px ;">
                                 </li>
                                 <li>
                                     <p>
                                         Una vez que hayamos hecho esto, deberemos poner la partición sdb1 recién creada con el formato LUKS, para ello ejecutamos el siguiente comando:
                                     </p>
-                                    <img src="images/comando5.png"style="margin-bottom:30px; margin-left:350px ;filter: brightness(1.8);contrast(1.1); transform: scale(1.4);">
+                                    <img src="images/comando5.png"style="border-radius: 30px; margin-bottom:30px; margin-left:350px ;filter: brightness(1.8);contrast(1.1); transform: scale(1.4);">
                                 </li>
                                 <li>
                                     <p>
                                         Ponemos «YES» en mayúsculas, introducimos la clave que queremos, y esperamos hasta que esté listo.
                                     </p>
-                                    <img src="images/comando6.png"style="margin-bottom:30px; margin-left:300px ;">
+                                    <img src="images/comando6.png"style="border-radius: 30px; margin-bottom:30px; margin-left:300px ;">
                                 </li>
                                 <li>
                                     <p>
                                         Si ejecutamos este comando podremos ver todos los discos duros, las particiones y el sistema de archivos que estamos utilizando. 
                                     </p>
-                                    <img src="images/comando7.png"style="margin-bottom:30px; margin-left:450px ;filter: brightness(1.8);contrast(1.1); transform: scale(1.4);">
+                                    <img src="images/comando7.png"style="border-radius: 30px; margin-bottom:30px; margin-left:450px ;filter: brightness(1.8);contrast(1.1); transform: scale(1.4);">
                                 </li>
                                 <li>
                                     <p>
                                         Una vez que lo hayamos hecho, tendremos que abrir la partición con LUKS que acabamos de crear, para poder realizar esto ponemos el siguiente comando:
                                     </p>
-                                    <img src="images/comando8.png"style="margin-bottom:30px; margin-left:300px ;filter: brightness(1.8);contrast(1.1); transform: scale(1.4);">
+                                    <img src="images/comando8.png"style="border-radius: 30px; margin-bottom:30px; margin-left:300px ;filter: brightness(1.8);contrast(1.1); transform: scale(1.4);">
                                 </li>
                                 <li>
                                     <p>
                                         Introducimos la contraseña, y a continuación volvemos a ejecutar el «lsblk -f» y nos aparecerá «particioncifrada» que es el nombre identificador que le hemos dado, pero podemos cambiarlo en cualquier momento.
                                     </p>
-                                    <img src="images/comando9.png"style="margin-bottom:30px; margin-left:300px ;">
+                                    <img src="images/comando9.png"style="border-radius: 30px; margin-bottom:30px; margin-left:300px ;">
                                 </li>
                                 <li>
                                     <p>
                                         Ahora tenemos que darle formato de archivos a esta partición, lo normal sería hacerlo con EXT4 también, para ello, ponemos el siguiente comando:
                                     </p>
-                                    <img src="images/comando10.png"style="margin-bottom:30px; margin-left:300px ;filter: brightness(1.8);contrast(1.1); transform: scale(1.4);">
+                                    <img src="images/comando10.png"style="border-radius: 30px; margin-bottom:30px; margin-left:300px ;filter: brightness(1.8);contrast(1.1); transform: scale(1.4);">
                                 </li>
                                 <li>
                                     <p>
                                         Y ya tendremos el sistema de archivos EXT4 en esta partición cifrada.
                                     </p>
-                                    <img src="images/comando11.png"style="margin-bottom:30px; margin-left:300px ;">
+                                    <img src="images/comando11.png"style="border-radius: 30px; margin-bottom:30px; margin-left:300px ;">
                                 </li>
                                 <li>
                                     <p>
                                         Ahora deberemos montar la partición a un directorio, para hacerlo, deberemos crear en la /home o donde queramos el punto de montaje:
                                     </p>
-                                    <img src="images/comando12.png"style="margin-bottom:30px; margin-left:300px ;filter: brightness(1.8);contrast(1.1);">
+                                    <img src="images/comando12.png"style="border-radius: 30px; margin-bottom:30px; margin-left:300px ;filter: brightness(1.8);contrast(1.1);">
                                 </li>
                                 <li>
                                     <p>
                                         Y ahora tenemos que montarlo:
                                     </p>
-                                    <img src="images/comando13.png"style="margin-bottom:30px; margin-left:300px ;filter: brightness(1.8);contrast(1.1);">
+                                    <img src="images/comando13.png"style="border-radius: 30px; margin-bottom:30px; margin-left:300px ;filter: brightness(1.8);contrast(1.1);">
                                     
                                     <select style="font-size: 18px; margin-bottom: 50px;">
                                         <option>Nota :)</option>
@@ -200,15 +200,64 @@
                                     
                                 </p>
                                 <p>
-                                    <img src="images/comando14.png" style="filter: brightness(1.8);  margin-left:300px">
+                                    <img src="images/comando14.png" style="border-radius: 30px; filter: brightness(1.8);  margin-left:300px">
                                 </p>
                                 <p>
                                     Introducimos la contraseña cuando nos la pida, y montamos la unidad nuevamente:
                                 </p>
-                                <img src="images/comando16.png" style="filter: brightness(1.8); margin-left:300px">
+                                <img src="images/comando16.png" style="border-radius: 30px; filter: brightness(1.8); margin-left:300px">
                             </ol>
                             <div>
-                                <h2>Firewalls pag 7 del word :)</h2>
+                                <h2>Firewalls</h2>
+                                <p>
+                                    UFW es el acrónimo de Uncomplicated Firewall,Linux ya tiene otras medidas de control para las conexiones que establecemos aquí, como las iptables, en realidad controlar el cortafuegos a través de ellas es una tarea de lo más complicada.
+                                    <br>
+                                    Canonical (desarrolladora responsable de Ubuntu) decidió crear un firewall más sencillo de usar para que todos los usuarios puedan configurar iptables de forma usando un pequeño número de comandos simples. Y así nació UFW, que es precisamente en el que nos centraremos ahora. 
+                                </p>
+                                <hr class="major" />
+                                <h2>Comandos esenciales para configurar el Firewall de Linux</h2>
+                                <ol>
+                                    <li>
+                                        <p>Comprobar el estado del cortafuego con el siguiente comando:</p>
+                                        <img src="images/Fuego1.png" style="border-radius: 30px; filter: brightness(1.8); margin-left:300px">
+                                    </li>
+                                    <li>
+                                        <p>Si está desactivado, podemos activarlo en un momento usando el primero de los siguientes comandos. Y, si está activado y lo queremos desactivar, podemos hacerlo igualmente sin problemas ejecutando el segundo de los siguientes comandos:</p>
+                                        <ul>
+                                            <li style="margin-bottom: 30px;">
+                                                <p>Activarlo:</p>
+                                                <img src="images/Fuego2.png" style="border-radius: 30px; filter: brightness(1.8); margin-left:100px">
+                                            </li>
+                                            <li style="margin-bottom: 30px;">
+                                                <p>Desactivar:</p>
+                                                <img src="images/Fuego3.jpg" style="border-radius: 30px; filter: brightness(1.8); margin-left:100px">
+                                            </li>
+                                            <li>
+                                                <p>Asi se deberia ver el paso 2</p>
+                                                <img src="images/Fuego4.png" style="border-radius: 30px;  filter: brightness(1.8); margin-left:100px">
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p>Hasta aquí el control básico del cortafuegos que viene por defecto en Linux.</p>
+                                    </li>
+                                </ol>
+                                <hr class="major" />
+                                <ul>
+                                    <li style="margin-bottom: 15px;">
+                                        <p>Para ver la lista de las aplicaciones con reglas, ejecutaremos el comando de la siguiente manera:</p>
+                                        <img src="images/Fuego5.png" style="border-radius: 30px;  filter: brightness(1.8); margin-left:300px">
+                                    </li>
+                                    <li style="margin-bottom: 15px;">
+                                        <p>para ver los detalles de una de las reglas, entonces ejecutaremos lo siguiente:</p>
+                                        <img src="images/Fuego6.png" style="border-radius: 30px; filter: brightness(1.8); margin-left:80px">
+                                        <img src="images/Fuego7.png" style="border-radius: 30px;  filter: brightness(1.8); margin-left:80px" >
+                                    </li>
+                                    <li>
+                                        <p>Con el firewall activado ya estaremos un poco protegidos, ya que se bloquearán todas las conexiones del exterior a nuestro PC.</p>
+                                        <!--Me quede en la pagina 9 en los puertos de 50000 al 53000 -->
+                                    </li>
+                                </ul>
                             </div>
                         </section>
 
