@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seguridad en linux</title>
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 
 </head>
 <body class="is-preload">
@@ -181,8 +183,36 @@
                                             <td><p>Ahora deberemos montar la partición a un directorio, para hacerlo, deberemos crear en la /home o donde queramos el punto de montaje:</p></td>
                                             <td><img src="images/comando12.png"style="border-radius: 5px;"></td>
                                         </tr>
+                                        <tr>
+                                            <td><p>11-.</p></td>
+                                            <td><p> Y ahora tenemos que montarlo:</p></td>
+                                            <td>
+                                                <img src="images/comando13.png"style="border-radius: 5px;">
+                                                <blockquote><p>Nota:<br>Y si accedemos al directorio «/home/bron/particioncifrada/archivos» podremos escribir todos los datos que queramos.</p></blockquote>
+                                            </td>
+                                        </tr>
+                                        
                                     </tbody>
                                 </table>
+                                <hr class="major">
+                                <div class="box">
+                                    <ul>
+                                        <li>
+                                            <p>
+                                                Si reiniciamos el ordenador, no estará montada la unidad, ni tampoco tendremos abierta la partición con LUKS, por tanto, cada vez que reiniciemos y queramos acceder a esta partición, tendremos que hacer lo siguiente:
+                                                
+                                                 <span class="image fit"><img src="images/comando14.png" style="height: auto; width:auto;"></span>    
+                                            </p>
+                                        </li>
+
+                                        <li>
+                                            <p>
+                                                Introducimos la contraseña cuando nos la pida, y montamos la unidad nuevamente:
+                                                <span class=" image fit"><img src="images/comando16.png" style="height: auto; width:auto;"></span>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                                 
                             <div>
@@ -201,20 +231,24 @@
                                     </li>
                                     <li>
                                         <p>Si está desactivado, podemos activarlo en un momento usando el primero de los siguientes comandos. Y, si está activado y lo queremos desactivar, podemos hacerlo igualmente sin problemas ejecutando el segundo de los siguientes comandos:</p>
-                                        <ul>
-                                            <li style="margin-bottom: 30px;">
-                                                <p>Activarlo:</p>
-                                                <img src="images/Fuego2.png" style="border-radius: 30px; filter: brightness(1.8); margin-left:100px">
-                                            </li>
-                                            <li style="margin-bottom: 30px;">
-                                                <p>Desactivar:</p>
-                                                <img src="images/Fuego3.jpg" style="border-radius: 30px; filter: brightness(1.8); margin-left:100px">
-                                            </li>
-                                            <li>
-                                                <p>Asi se deberia ver el paso 2</p>
-                                                <img src="images/Fuego4.png" style="border-radius: 30px;  filter: brightness(1.8); margin-left:100px">
-                                            </li>
-                                        </ul>
+                                        <div class="table-wrapper">
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><p>Activarlo</p></td>
+                                                        <td><img src="images/Fuego2.png" style="border-radius: 5px; "></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><p>Desactivarlo</p></td>
+                                                        <td> <img src="images/Fuego3.jpg" style="border-radius: 5px; "></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><p>Asi se deberia ver el paso 2</p></td>
+                                                        <td><img src="images/Fuego4.png" style="border-radius: 5px;"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </li>
                                     <li>
                                         <p>Hasta aquí el control básico del cortafuegos que viene por defecto en Linux.</p>
@@ -233,10 +267,97 @@
                                     </li>
                                     <li>
                                         <p>Con el firewall activado ya estaremos un poco protegidos, ya que se bloquearán todas las conexiones del exterior a nuestro PC.</p>
-                                        <!--Me quede en la pagina 9 en los puertos de 50000 al 53000 -->
+                                        
                                     </li>
                                 </ul>
+                                <hr class="major">
+                                <h2>Herramientas de seguridad</h2>
+                                <div class="table-wrapper">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td><p>SELinux</p></td>
+                                                <td>
+                                                    <p>
+                                                        Security-Enhanced Linux (SELinux) es una arquitectura de seguridad para los sistemas Linux que otorga a los administradores mayor control sobre quién puede acceder al sistema, originalmente la desarrolló la agencia de seguridad nacional (NSA) de estados enidos como una serie de parches para el kernel de Linux con los módulos de seguridad de Linux (LSM).
+                                                    </p>
+                                                    <div class="w3-dropdown-hover">¿Como funciona?
+                                                        <div class="w3-dropdown-content w3-card-4" style="width:250px">
+                                                          
+                                                          <div class="w3-container">
+                                                            <p>
+                                                                define los controles de acceso para las aplicaciones, los procesos y los archivos de un sistema.
+                                                                <br>
+                                                                utiliza políticas de seguridad, que son un conjunto de reglas que le indican a SELinux los recursos a los que puede acceder y a los que no.
+                                                            </p>
+                                                            
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                </td>
+                                                <td>
+                                                    <img src="images/SElinux.jpg" style="border-radius: 5px; ">
+                                                </td>
+                                                
+                                            </tr>
+                                            <tr>
+                                                <td><p>AppArmor</p></td>
+                                                <td>
+                                                    <p>
+                                                        Es un sistema de seguridad de aplicaciones Linux eficaz y fácil de usar. AppArmor protege de forma proactiva el sistema operativo y las aplicaciones contra amenazas internas o externas, incluso ataques de día cero, al imponer un buen comportamiento y evitar que se exploten fallas de aplicaciones conocidas y desconocidas.
+                                                    </p>
+                                                    <div class="w3-dropdown-hover">¿Como funciona?
+                                                        <div class="w3-dropdown-content w3-card-4" style="width:250px">
+                                                          
+                                                          <div class="w3-container">
+                                                            <p>
+                                                                AppArmor cuenta con perfiles específicos por cada una de las aplicaciones que controla, que serían lo equivalente a las políticas de SELinux. cada perfil de AppArmor apunta a una ruta concreta, y detalla que acciones tiene permitidos el ejecutable que se encuentra detrás de esta ruta.
+                                                            </p>
+                                                            
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                </td>
+                                                <td> <img src="images/AppArmor.jpg" style="border-radius: 5px; "></td>
+                                            </tr>
+                                            <tr>
+                                                <td><p>Fail2ban</p></td>
+                                                <td>
+                                                    <p>
+                                                        Fail2ban es una utilidad que mejora la seguridad de los servidores bloqueando automáticamente las direcciones IP que muestran un comportamiento sospechoso o malicioso, como múltiples intentos fallidos de inicio de sesión,en este caso el software responde dinámicamente a los intentos de acceso no autorizados y reduce el riesgo de que se produzcan infracciones. 
+                                                    </p>
+                                                    <div class="w3-dropdown-hover">¿Como funciona?
+                                                        <div class="w3-dropdown-content w3-card-4" style="width:250px">
+                                                          
+                                                          <div class="w3-container">
+                                                            <p>
+                                                                Fail2ban es un demonio que está monitorizando cada acceso al sistema a los diferentes servicios que tienen puertos abiertos"principalmente SSH, HTTPS",Monitoriza el número de intentos de acceso de una dirección IP, y detecta cuando el número de intentos son sospechos de ser un ataque. Una vez identificado un posible atacante Fail2ban utiliza el Firewall del sistema (IPtables en sistemas Linux) para bloquear la dirección IP. 
+                                                            </p>
+                                                            
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                </td>
+                                                <td><img src="images/Fail2ban.jpg" style="border-radius: 5px; width: 200px; height: 250px;"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
+                            <h2>Referencias</h2>
+                                <div class="box">
+                                    <ul>
+                                        <li><p>López, A. (2024, 8 septiembre). Cifra discos, particiones y archivos con LUKS en tu servidor Linux. RedesZone. https://www.redeszone.net/tutoriales/seguridad/cifrar-discos-particiones-archivos-luks-linux/</p></li>
+                                        <li><p>Velasco, R. (2024, 25 enero). Proteger Linux: configurar y usar un Firewall. SoftZone. https://www.softzone.es/linux/tutoriales/firewall-ufw/</p>
+                                        <li><p>¿Qué es SElinux? SELinux (Security Enhanced Linux) le permite configurar el nivel de seguridad para sus sistemas Linux. (s. f.). https://www.redhat.com/es/topics/linux/what-is-selinux</p></li>
+                                        <li><p>De Oriol, V. T. L. E. (2022, 2 noviembre). AppArmor. Como Funciona y como Puedes Monitorizar su Estado en GNU/Linux. ComputerNewAge. https://computernewage.com/2022/09/03/gnu-linux-apparmor-tutorial/</p></li>
+                                        <li><p>Bejarano, M. B., & Antonio, J. A. (s. f.). Integración de los servicios de autenticación en un directorio OpenLDAP. https://biblus.us.es/bibing/proyectos/abreproy/11037/fichero/memoria%252Fcapitulo01.pdf</p></li>
+                                        <li><p>¿Qué es SElinux? SELinux (Security Enhanced Linux) le permite configurar el nivel de seguridad para sus sistemas Linux. (s. f.). https://www.redhat.com/es/topics/linux/what-is-selinux</p></li>
+                                        <li><p>Oteir, N. (2024, 5 noviembre). TOP 30 Herramientas de seguridad para Linux. INTROSERV. https://introserv.com/es/blog/top-30-herramientas-de-seguridad-para-linux/#-failban</p></li>
+                                        <li><p>Yvoictra. (2022, 25 diciembre). Proteger tu servidor con Fail2ban. Oastic. https://oastic.com/es/posts/protect-your-server-with-fail2ban/</p></li>
+                                        <li><p>colaboradores de Wikipedia. (2024, 14 enero). AppArmor. Wikipedia, la Enciclopedia Libre. https://es.wikipedia.org/wiki/AppArmor</p></li>
+                                    </ul>
+                                </div>
                         </section>
 
                 </div>
